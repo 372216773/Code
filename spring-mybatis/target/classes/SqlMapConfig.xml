@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--dtd的约束-->
+<configuration>
+
+    <!--别名-->
+    <typeAliases>
+        <!--起别名,避免代码过长-->
+        <typeAlias type="com.wj.entity.User" alias="user"/>
+    </typeAliases>
+    <!--default="dev" 表示开发的环境-->
+    <environments default="dev">
+        <!--id与default相同-->
+        <environment id="dev">
+            <!--事务管理器-->
+            <transactionManager type="JDBC"/>
+            <!--数据源 连接池-->
+                <dataSource type="POOLED">
+                    <!--配置属性-->
+                    <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                    <!--5.X的版本乱码的解决方法:&amp;characterEncoding=utf8-->
+                    <property name="url" value="jdbc:mysql://localhost:3306/db3?serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8"/>
+                    <property name="username" value="root"/>
+                    <property name="password" value="root"/>
+                </dataSource>
+        </environment>
+
+        <!--生产环境-->
+        <!--<environment id="prod">
+            &lt;!&ndash;事务管理器&ndash;&gt;
+            <transactionManager type="JDBC"/>
+            &lt;!&ndash;数据源 连接池&ndash;&gt;
+            <dataSource type="POOLED">
+                &lt;!&ndash;配置属性&ndash;&gt;
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/db3"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>-->
+    </environments>
+
+    <mappers>
+        <!--1.可以选择配置多个mapper-->
+        <!--<mapper resource="sqlMap/UserMapper.xml"/>-->
+        <!--2.配置扫描路径.dao包下有对应接口,与接口同名的xml文件-->
+        <package name="com.wj.mapper"/>
+    </mappers>
+
+</configuration>

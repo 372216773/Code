@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--application.xml中存放的是要进行管理的对象,只是配置在这,要解析才有用
+要解析xml中存放的数据,就必须用Maven来拉取jar包-->
+<!--name="自定义名称" class="类的路径"-->
+<beans>
+    <!--name="自定义的一个对象的名称" class="这个对象对应的类的路径"-->
+    <bean name="memberController" class="com.wj.goods.controller.MemberController" >
+        <!--property:属性-->
+        <properties>
+            <!--name="对应对象中的属性名" bean="为memberService赋值一个引用类型的值,要在bean(所有的对象)中能找到"-->
+            <property name="memberService" bean="memberService"/>
+            <!--name="对应对象中的属性名'" value="为vipName赋值一个数值类型的值"-->
+            <property name="vipNumber" value="10086"/>
+        </properties>
+    </bean>
+    <bean name="goodsController" class="com.wj.goods.controller.GoodsController">
+        <properties>
+            <!--name="对象中的属性名" bean="为goodsService赋引用类型的值"-->
+            <property name="goodsService" bean="goodsService"/>
+        </properties>
+    </bean>
+
+    <bean name="memberService" class="com.wj.goods.service.MemberService">
+        <properties>
+            <property name="memberDao" bean="memberDao"/>
+            <property name="goodsDao" bean="goodsDao"/>
+        </properties>
+    </bean>
+    <bean name="goodsService" class="com.wj.goods.service.GoodsService"/>
+
+    <bean name="memberDao" class="com.wj.goods.dao.MemberDao"/>
+    <bean name="goodsDao" class="com.wj.goods.dao.GoodsDao"/>
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/20200114/20200114.iml" filepath="$PROJECT_DIR$/20200114/20200114.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20200121/20200121.iml" filepath="$PROJECT_DIR$/20200121/20200121.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20201229/20201229.iml" filepath="$PROJECT_DIR$/20201229/20201229.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20210101/20210101.iml" filepath="$PROJECT_DIR$/20210101/20210101.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BookManager/BookManager.iml" filepath="$PROJECT_DIR$/BookManager/BookManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo1/Demo1.iml" filepath="$PROJECT_DIR$/Demo1/Demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo2/Demo2.iml" filepath="$PROJECT_DIR$/Demo2/Demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo3/Demo3.iml" filepath="$PROJECT_DIR$/Demo3/Demo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SeqList/SeqList.iml" filepath="$PROJECT_DIR$/SeqList/SeqList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gc/gc.iml" filepath="$PROJECT_DIR$/gc/gc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inheritance/inheritance.iml" filepath="$PROJECT_DIR$/inheritance/inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflect/reflect.iml" filepath="$PROJECT_DIR$/reflect/reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/单链表/单链表.iml" filepath="$PROJECT_DIR$/单链表/单链表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/双向链表/双向链表.iml" filepath="$PROJECT_DIR$/双向链表/双向链表.iml" />
+    </modules>
+  </component>
+</project>

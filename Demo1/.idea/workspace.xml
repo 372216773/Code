@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6235b61c-f161-40b7-b9c4-e94af8097702" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1e7htUZIzSAc1wkL1OJBAMCx0Q7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../新卓越第二周" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.Demo12">
+    <configuration name="Demo10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo04.Demo10" />
+      <module name="新卓越第一周" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Demo04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo04.Demo11" />
+      <module name="新卓越第一周" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Demo04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo04.Demo12" />
+      <module name="新卓越第一周" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Demo04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo04.Demo8" />
+      <module name="新卓越第一周" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Demo04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo04.Demo9" />
+      <module name="新卓越第一周" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Demo04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Demo12" />
+        <item itemvalue="Application.Demo11" />
+        <item itemvalue="Application.Demo10" />
+        <item itemvalue="Application.Demo9" />
+        <item itemvalue="Application.Demo8" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6235b61c-f161-40b7-b9c4-e94af8097702" name="Default Changelist" comment="" />
+      <created>1593678752377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593678752377</updated>
+      <workItem from="1593678753885" duration="7042000" />
+      <workItem from="1593692408911" duration="5896000" />
+      <workItem from="1593698344084" duration="4987000" />
+      <workItem from="1593728355703" duration="8366000" />
+      <workItem from="1593737269952" duration="360000" />
+      <workItem from="1593740569710" duration="497000" />
+      <workItem from="1593741851935" duration="72000" />
+      <workItem from="1593747152885" duration="180000" />
+      <workItem from="1593747346744" duration="1652000" />
+      <workItem from="1593749018089" duration="11000" />
+      <workItem from="1593749042140" duration="4000" />
+      <workItem from="1593749313477" duration="332000" />
+      <workItem from="1593749660016" duration="184000" />
+      <workItem from="1593750070120" duration="17000" />
+      <workItem from="1593750131151" duration="138000" />
+      <workItem from="1593750282074" duration="95000" />
+      <workItem from="1593750399133" duration="1076000" />
+      <workItem from="1593751489673" duration="132000" />
+      <workItem from="1593751645457" duration="961000" />
+      <workItem from="1593752622607" duration="16418000" />
+      <workItem from="1593836013170" duration="24332000" />
+      <workItem from="1593908481472" duration="774000" />
+      <workItem from="1593909297434" duration="87000" />
+      <workItem from="1593909406012" duration="20312000" />
+      <workItem from="1593991526531" duration="19213000" />
+      <workItem from="1594099131128" duration="665000" />
+      <workItem from="1594363054952" duration="3252000" />
+      <workItem from="1594432630707" duration="93000" />
+      <workItem from="1595341219693" duration="173000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="244" key="#Custom_Plugin_Repositories" timestamp="1593908777307">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="479" y="244" key="#Custom_Plugin_Repositories/0.0.1280.689@0.0.1280.689" timestamp="1593908777307" />
+    <state x="361" y="0" width="658" height="689" key="#Demo1_(2)" timestamp="1593751531956">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="361" y="0" width="658" height="689" key="#Demo1_(2)/0.0.1280.689@0.0.1280.689" timestamp="1593751531956" />
+    <state x="421" y="103" key="FileChooserDialogImpl" timestamp="1595341393948">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="103" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1595341393948" />
+    <state width="1237" height="206" key="GridCell.Tab.0.bottom" timestamp="1594366309905">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="206" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594366309905" />
+    <state width="1237" height="206" key="GridCell.Tab.0.center" timestamp="1594366309904">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="206" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594366309904" />
+    <state width="1237" height="206" key="GridCell.Tab.0.left" timestamp="1594366309904">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="206" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594366309904" />
+    <state width="1237" height="206" key="GridCell.Tab.0.right" timestamp="1594366309905">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="206" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594366309905" />
+    <state x="107" y="0" key="SettingsEditor" timestamp="1595341333034">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="107" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1595341333034" />
+    <state x="56" y="0" key="new project wizard" timestamp="1594432724461">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="56" y="0" key="new project wizard/0.0.1280.689@0.0.1280.689" timestamp="1594432724461" />
+    <state x="233" y="27" width="739" height="579" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595341284208">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="27" width="739" height="579" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1280.689@0.0.1280.689" timestamp="1595341284208" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1593996908765">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1593996908765" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1593953455687">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1593953455687" />
+  </component>
+</project>

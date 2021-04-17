@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace对应接口-->
+<mapper namespace="com.wj.mapper.UserMapper">
+    <!--将sql查询结果映射为Java对象-->
+    <resultMap id="userMap" type="com.wj.entity.User">
+        <!--对象属性值与sql返回列名不同时,要设置对应关系-->
+        <!--property:Java对象属性名 column:sql返回结果列名-->
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+    </resultMap>
+    <!--id对应方法名-->
+    <select id="selectById" parameterType="java.lang.Integer" resultType="user">
+        select *
+        from user
+        where id = #{value}
+    </select>
+
+    <!--where-if-->
+    <!--当前一个条件不成立时,and会被去掉-->
+    <select id="listByUser" parameterType="user" resultType="user">
+        select *
+        from user
+        <where>
+            <if test="id!=null">
+                and id = #{id}
+            </if>
+            <if test="name!=null">
+                and name = #{name}
+            </if>
+            <if test="age!=null">
+                and age = #{age}
+            </if>
+        </where>
+    </select>
+
+    <!--where-foreach-->
+    <select id="ListByIdWithForeach" resultType="user">
+        select *
+        from user
+        <where>
+            <foreach collection="list" item="id" open="id in (" separator="," close=")">
+                #{id}
+            </foreach>
+        </where>
+    </select>
+
+    <!--update(增删改),返回类型确定,不用声明-->
+    <update id="updateUser" parameterType="user">
+        update user
+        <set>
+            <if test="name!=null">
+                name = #{name}
+            </if>
+            <if test="age!=null">
+                age = #{age}
+            </if>
+        </set>
+        <where>
+            <if test="id!=null">
+                id = #{id}
+            </if>
+            <if test="id==null">
+                id = 1
+            </if>
+        </where>
+    </update>
+
+    <select id="selectById1" parameterType="user" resultType="user">
+        select * from user
+        <where>
+            <choose>
+                <when test="name!=null">
+                    name = #{name}
+                </when>
+                <when test="age!=null">
+                    age = #{age}
+                </when>
+                <otherwise>
+                    id = #{id}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <select id="selectByIdAndName" resultType="user">
+        select *
+        from user
+        where id=#{id} and name=#{name}
+    </select>
+
+    <resultMap id="addressMap" type="user">
+        <id property="id" column="uid"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <!--一对一-->
+        <association property="address" javaType="com.wj.entity.Address">
+            <id property="id" column="uid"/>
+            <result property="city" column="city"/>
+            <result property="province" column="province"/>
+        </association>
+        <!--一对多-->
+        <collection property="roles" ofType="com.wj.entity.Role">
+            <id property="id" column="rid"/>
+            <result property="name" column="rname"/>
+            <result property="describe" column="rdescribe"/>
+        </collection>
+    </resultMap>
+
+    <select id="listById" resultMap="addressMap">
+        select user.id    uid,
+               user.name,
+               user.age,
+               role.id    rid,
+               role.name  rname,
+               role.describe rdescribe,
+               user_address.province,
+               user_address.city
+        from user
+                 inner join role
+                 inner join user_role_rel urr
+                 inner join user_address
+                            on user.id = urr.uid and role.id = urr.rid and user_address.id = urr.uid
+        where user.id = #{id}
+    </select>
+
+</mapper>

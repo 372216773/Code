@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <!--这只是普通的xml文件,要解析xml文件才能起作用-->
+    <!--name:(不加包名)简单类名的小写 不起名字默认是类名的小写 class作用:标明管理的类-->
+    <bean name="memberController" class="com.wj.goods.controller.MemberController">
+        <properties>
+            <!--name:对应对象中的属性的值 bean:属性值为memberService指向的对象(这个值必须要是下边创建的bean中能找到的对象)-->
+            <property name="memberService" bean="memberService"></property>
+            <!--name:对应对象中的属性的值 value:与属性类型匹配的值-->
+            <property name="vipName" value="10086"></property>
+        </properties>
+    </bean>
+    <bean name="goodsController" class="com.wj.goods.controller.GoodsController">
+        <properties>
+            <property name="goodsService" bean="goodsService"></property>
+        </properties>
+    </bean>
+
+    <bean name="memberService" class="com.wj.goods.service.MemberService">
+        <properties>
+            <property name="goodsDao" bean="goodsDao"></property>
+            <property name="memberDao" bean="memberDao"></property>
+        </properties>
+    </bean>
+    <bean name="goodsService" class="com.wj.goods.service.GoodsService"></bean>
+
+    <bean name="memberDao" class="com.wj.goods.dao.MemberDao"></bean>
+    <bean name="goodsDao" class="com.wj.goods.dao.GoodsDao"></bean>
+
+</beans>
