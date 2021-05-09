@@ -6,8 +6,12 @@
 </head>
 <body>
 <h1>商品列表</h1>
+<div th:text="${nickname}"></div>
 <ul th:each="goods:${goodsList}">
     <li th:text="${goods.title}"></li>
 </ul>
+<!--如果自己设置的网址为空,才会使用原本a标签的网址-->
+<a th:href="${myUrl}" href="http://www.baidu.com">这是B站网址,当网址为空,这个链接会是百度网址</a>
+<img th:src="${myImg}" src="奇蛋物语.jpg" alt="">
 </body>
 </html>
