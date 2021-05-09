@@ -24,7 +24,7 @@ public class GoodsController {
         modelAndView.addObject("goodsList",goods);
         modelAndView.addObject("nickname","admin");
         modelAndView.addObject("myUrl","https://www.bilibili.com/");
-        modelAndView.addObject("myImg","地面小分队悬疑海报.jpg");
+        modelAndView.addObject("myImg","/地面小分队悬疑海报.jpg");
         return modelAndView;
     }
 

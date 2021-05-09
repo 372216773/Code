@@ -91,6 +91,7 @@
             </resource>
         </resources>
         <plugins>
+            <!--原始的maven打包只会打自己写的代码,-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
