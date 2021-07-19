@@ -10,7 +10,9 @@
 public class SelectionSort {
 
     public static void selectionSort (int[] array) {
-
+        if (array == null || array.length < 2) {
+            return;
+        }
         //i为被比较值,从0到倒数第二个数
         for (int i = 0; i < array.length - 1; i++) {
             int minIndex = i;

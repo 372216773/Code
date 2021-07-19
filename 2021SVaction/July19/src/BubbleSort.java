@@ -10,6 +10,9 @@
 public class BubbleSort {
 
     public static void bubbleSort (int[] array) {
+        if (array == null || array.length < 2) {
+            return;
+        }
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -20,6 +23,9 @@ public class BubbleSort {
     }
 
     public static void bubbleSortPlus (int[] array) {
+        if (array == null || array.length < 2) {
+            return;
+        }
 
         //减少外层循环次数,例: [8, 7, 6, 1, 2, 3, 4, 5]
         //如果该次循环没有发生交换，就说明数组已经排好序了，那么后面的循环比较就可以停止了
