@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 4）一个数组中有一种数出现了奇数次，其他数都出现了偶数次，怎么找到这一个数
  * 5）一个数组中有两种数出现了奇数次，其他数都出现了偶数次，怎么找到这两个数
  */
-public class Code07_EvenTimesOddTimes {
+public class EvenTimesOddTimes {
 
     //一个数组中有一种数出现了奇数次，其他数都出现了偶数次，找到这一个数
     public static void printOddTimesNum1 (int[] array) {
