@@ -75,7 +75,7 @@ public class maze {
             }
             System.out.println();
         }
-        System.out.println("---------------------");
+        System.out.println("------------------------------");
     }
 
     //需要棋盘,初始坐标,终点坐标
