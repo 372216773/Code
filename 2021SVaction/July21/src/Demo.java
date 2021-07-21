@@ -1,5 +1,3 @@
-package Array;
-
 import java.util.Arrays;
 
 //将奇数放到数组的后边,偶数放到数组的前边
