@@ -8,7 +8,8 @@ class Node {
         this.val = val;
     }
 
-    public Node(){}
+    public Node() {
+    }
 }
 
 public class MyLinkedList {
@@ -35,7 +36,7 @@ public class MyLinkedList {
             return null;
         }
         Node cur = this.head;
-        while(cur.next != null){
+        while (cur.next != null) {
             cur = cur.next;
         }
         return cur;
@@ -43,11 +44,11 @@ public class MyLinkedList {
 
     //倒数第二个节点
     public Node findLastTwoNode() {
-        if (this.head == null ||this.head.next == null) {
+        if (this.head == null || this.head.next == null) {
             System.out.println("你没有1个以上的节点");
         }
         Node cur = this.head;
-        while(cur.next.next != null) {
+        while (cur.next.next != null) {
             cur = cur.next;
         }
         return cur;
@@ -94,12 +95,13 @@ public class MyLinkedList {
 
     //任意位置插入,下标从0开始
     public void addIndex(int index, int data) {
-        if (index <0 ||index > size()) {
+        if (index < 0 || index > size()) {
             System.out.println("位置不合法");
+            return;
         }
         int count = 0;
         Node cur = this.head;
-        Node curPrev;
+        Node curPrev = null;
         Node newNode = new Node(data);
 
         if (index == 0) {
@@ -113,6 +115,7 @@ public class MyLinkedList {
                 count++;
             }
             newNode.next = cur;
+            curPrev.next = newNode;
         }
 
     }
@@ -132,15 +135,61 @@ public class MyLinkedList {
         return false;
     }
 
-    //删除所有职位key的节点
-    public void removeAllKey(int key) {}
+    //删除第一次出现关键字为key的节点
+    public void remove(int key) {
+        if (this.head == null) {
+            System.out.println("链表为空");
+        }
+        if (contains(key)) {
+            if (this.head.val == key) {
+                this.head = this.head.next;
+            } else {
+                Node cur = this.head;
+                Node curPrev = null;
+                while (cur.val != key) {
+                    curPrev = cur;
+                    cur = cur.next;
+                }
+                curPrev.next = cur.next;
+            }
+        } else {
+            System.out.println("不包含该节点");
+        }
+    }
+
+    //删除所有值为key的节点
+    public void removeAllKey(int key) {
+        if (this.head == null) {
+            System.out.println("链表为空");
+            return;
+        }
+        if (contains(key)) {
+            Node curPrev = null;
+            Node cur = this.head;
+            while (cur != null) {
+                if (this.head.val == key) {
+                    this.head = this.head.next;
+                    cur = this.head;
+                } else {
+                    if (cur.val == key) {
+                        curPrev.next = cur.next;
+                    } else {
+                        curPrev = cur;
+                    }
+                    cur = cur.next;
+                }
+            }
+        } else {
+            System.out.println("没有此节点");
+        }
+    }
 
     //得到单链表的长度
     public int size() {
         Node cur = this.head;
         int count = 0;
-        while(cur != null) {
-            count ++;
+        while (cur != null) {
+            count++;
             cur = cur.next;
         }
         return count;
@@ -153,14 +202,16 @@ public class MyLinkedList {
             return;
         }
         Node cur = this.head;
-        while(cur != null) {
+        while (cur != null) {
             System.out.print(cur.val + "\t");
             cur = cur.next;
         }
-
+        System.out.println();
     }
 
     //
-    public void clear() {}
+    public void clear() {
+        this.head = null;
+    }
 
 }
