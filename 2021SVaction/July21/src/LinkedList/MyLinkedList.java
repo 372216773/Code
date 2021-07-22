@@ -209,9 +209,266 @@ public class MyLinkedList {
         System.out.println();
     }
 
-    //
+    public void display(Node head) {
+        if (head == null) {
+            System.out.println("链表为空");
+            return;
+        }
+        Node cur = head;
+        while (cur != null) {
+            System.out.print(cur.val + "\t");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
+    //清空链表
     public void clear() {
         this.head = null;
     }
+
+    //反转链表
+    public void reverseList() {
+        if (this.head == null) {
+            System.out.println("链表为空!");
+            return;
+        }
+
+        Node curPrev = null;
+        Node cur = this.head;
+        Node curNext;
+
+        while (cur != null) {
+            curNext = cur.next;
+            cur.next = curPrev;
+            curPrev = cur;
+            cur = curNext;
+        }
+    }
+
+    //找中间节点
+    public Node middleNode() {
+        if (this.head == null) {
+            System.out.println("链表为空");
+        }
+        Node slow = this.head;
+        Node fast = this.head;
+
+        //条件都必须满足
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    //链表中倒数第K个节点,遍历一遍    1.长度 - K    2.快慢指针,两指针相差K - 1步
+    public Node FindKthToTail(int k) {
+        if (head == null || k <= 0) {
+            return null;
+        }
+        Node slow = this.head;
+        Node fast = this.head;
+        while (--k != 0) {
+            //fast.next == null说明已经走到了最后一个结点
+            if (fast.next != null) {
+                fast = fast.next;
+            } else {
+                return null;
+            }
+        }
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
+    //合并两个有序链表为有序链表,需要傀儡节点,作为引子,在后边接上2个链表的节点
+    public Node mergeTwoLists(Node head1, Node head2) {
+        Node newHead = new Node(-1);
+        Node tmp = newHead;
+
+        while (head1 != null && head2 != null) {
+            if (head1.val < head2.val) {
+                tmp.next = head1;
+                head1 = head1.next;
+            } else {
+                tmp.next = head2;
+                head2 = head2.next;
+            }
+            tmp = tmp.next;
+        }
+        if (head1 == null) {
+            tmp.next = head2;
+        }
+        if (head2 == null) {
+            tmp.next = head1;
+        }
+        return newHead.next;
+    }
+
+    //给定一个值K,将小于K的数放到左边,且不改变原链表的顺序
+    public Node partition(int x) {
+        if (this.head == null) {
+            System.out.println("链表为空");
+        }
+        Node beforeStart = null;
+        Node beforeEnd = null;
+        Node afterStart = null;
+        Node afterEnd = null;
+        Node cur = this.head;
+
+        while (cur != null) {
+            if (cur.val < x) {
+                if (beforeStart == null) {
+                    beforeStart = beforeEnd = cur;
+                } else {
+                    beforeEnd = beforeEnd.next = cur;
+                }
+            } else {
+                if (afterStart == null) {
+                    afterStart = afterEnd = cur;
+                } else {
+                    afterEnd = afterEnd.next = cur;
+                }
+            }
+            cur = cur.next;
+        }
+
+        if (beforeStart == null) {
+            return afterStart;
+        }
+
+        beforeEnd.next = afterStart;
+
+        //将后一段的链表尾结点的next置为null
+        if (afterStart != null) {
+            afterEnd.next = null;
+        }
+        return beforeStart;
+    }
+
+    //删除有序链表中重复节点
+    public void deleteRe() {
+        Node curPrev = this.head;
+        Node cur = this.head.next;
+        while (cur != null) {
+            if (curPrev.val == cur.val) {
+                while (cur != null && curPrev.val == cur.val) {
+                    cur = cur.next;
+                }
+            }
+            curPrev.next = cur;
+            curPrev = cur;
+            if (cur != null) {
+                cur = cur.next;
+            }
+        }
+    }
+
+    //回文结构 1 -> 2321
+    public boolean chkPalindrome() {
+        if (this.head == null) {
+            System.out.println("链表为空");
+            return false;
+        }
+        //1.找到中间位置
+        Node slow = this.head;
+        Node fast = this.head;
+        //只要不满足一个条件,就说明找到了中间节点
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //2.逆置后半段链表
+        Node curPrev = slow;
+        Node cur = slow.next;
+        Node curNext;
+        while (cur != null) {
+            curNext = cur.next;
+            cur.next = curPrev;
+            curPrev = cur;
+            cur = curNext;
+        }
+
+        //slow到了最后一个结点的位置上
+        //3.判断
+        while (head != slow) {
+            if (head.val != fast.val) {
+                return false;
+            }
+            head = head.next;
+            fast = fast.next;
+        }
+        return true;
+    }
+
+    //判断连个链表是否相交:差值
+    //1.找差值
+    //2.长的先走差值
+    //3.一起走
+    public Node getIntersectionNode(Node headA, Node headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+
+        int lenA = 0;
+        int lenB = 0;
+        Node pl = headA;
+        Node ps = headB;
+
+        while (pl != null) {
+            pl = pl.next;
+            lenA++;
+        }
+        while (ps != null) {
+            ps = ps.next;
+            lenB++;
+        }
+
+        pl = headA;
+        ps = headB;
+
+        int len = lenA - lenB;
+
+        if (len < 0) {
+            pl = headB;
+            ps = headA;
+            len = -len;
+        }
+
+        while(len != 0) {
+            pl = pl.next;
+            len --;
+        }
+
+        while(pl != ps) {
+            pl = pl.next;
+            ps = ps.next;
+        }
+        return pl;
+    }
+
+    //判断链表是否有环:快慢指针,一起出发,跑圈快的总会再次遇到慢的
+    //快的一次走两步,慢的一次走一步,如果是3步,4步.可能会错过
+    public boolean hasCycle(Node head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //返回链表入环第一个节点
+
 
 }
