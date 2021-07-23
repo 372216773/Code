@@ -438,12 +438,12 @@ public class MyLinkedList {
             len = -len;
         }
 
-        while(len != 0) {
+        while (len != 0) {
             pl = pl.next;
-            len --;
+            len--;
         }
 
-        while(pl != ps) {
+        while (pl != ps) {
             pl = pl.next;
             ps = ps.next;
         }
@@ -458,7 +458,7 @@ public class MyLinkedList {
         }
         Node fast = head;
         Node slow = head;
-        while(fast != null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
@@ -469,6 +469,56 @@ public class MyLinkedList {
     }
 
     //返回链表入环第一个节点
+    public Node detectCycle(Node head) {
+        Node fast = this.head;
+        Node slow = this.head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                fast = this.head;
+                while (fast == slow) {
+                    fast = fast.next;
+                    slow = slow.next;
+                }
+                return fast;
+            }
+        }
+        return null;
+    }
 
+    //删除中间节点
+    //删除中间某个节点(既不是第一个节点,也不是最后一个节点),只能访问这个节点
+    public void deleteNode(Node node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
 
+    //
+    public Node rotateRight(Node head, int k) {
+        if (head == null || k < 0) return null;
+        Node fast = head;
+        Node slow = head;
+        while (k-- != 0) {
+            fast = fast.next;
+            if (fast == null) {
+                fast = head;
+            }
+        }
+
+        //在头位置,说明不用移动
+        if (fast == slow) {
+            return head;
+        }
+        while (fast.next != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        Node newHead = slow.next;
+        fast.next = head;
+        slow.next = null;
+        return newHead;
+    }
 }
+
+
