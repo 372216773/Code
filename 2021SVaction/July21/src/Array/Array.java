@@ -1,7 +1,9 @@
+package Array;
+
 import java.util.Arrays;
 
 //将奇数放到数组的后边,偶数放到数组的前边
-public class Demo {
+public class Array {
 
     public static void main(String[] args) {
         int[] array = {4,6,5,4,2,3,4,4,7,3};
