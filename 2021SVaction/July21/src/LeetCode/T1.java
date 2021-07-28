@@ -1,4 +1,5 @@
-package LeetCode;//反转字符串
+package LeetCode;
+//反转字符串
 /*
 给一个字符类型的数组chas和一个整数size，请把大小为size的左半区整体右移到右半区，右半区整体移动到左边。
  */
