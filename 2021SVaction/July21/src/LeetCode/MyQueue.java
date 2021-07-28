@@ -3,7 +3,7 @@ package LeetCode;
 import java.util.Stack;
 
 //用栈实现队列
-public class T4 {
+public class MyQueue {
 
     private Stack<Integer> stack1 = new Stack<>();
     private Stack<Integer> stack2 = new Stack<>();
@@ -11,7 +11,7 @@ public class T4 {
     /**
      * Initialize your data structure here.
      */
-    public T4() {
+    public MyQueue() {
 
     }
 

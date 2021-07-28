@@ -6,12 +6,12 @@ import java.util.Queue;
 import java.util.Stack;
 
 //用队列实现栈
-public class T3 {
+public class MyStack {
 
     private static Queue<Integer> queue1;
     private static Queue<Integer> queue2;
 
-    T3() {
+    MyStack() {
         queue1 = new LinkedList<>();
         queue2 = new LinkedList<>();
     }
@@ -74,7 +74,7 @@ public class T3 {
 
 
     public static void main(String[] args) {
-        T3 t3 = new T3();
+        MyStack myStack = new MyStack();
         push(1);
         push(2);
         System.out.println(top());
