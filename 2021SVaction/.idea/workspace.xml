@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d97e59b0-5514-402e-8502-bc50d905d9a1" name="Default Changelist" comment="javase复习">
+      <change afterPath="$PROJECT_DIR$/.idea/2021SVaction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July17/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July19/July19.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July20/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July20/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July20/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July20/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July20/July20.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July21/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July21/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July21/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July21/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/July21/July21.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hsp/out/production/project/Demo/maze.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/spring_AOP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/springboot2.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../数据结构/线性表/src/nowCoder/solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2021SVaction.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/July19/src/InsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/July19/src/InsertSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_AOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_AOP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/conf/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/conf/JdbcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/META-INF/线性表.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1vQ50gSRo79PLj6wdFL88EqHr8z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/July19" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RunManager">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BubbleSort" />
+      <module name="2021SVaction" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BubbleSort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d97e59b0-5514-402e-8502-bc50d905d9a1" name="Default Changelist" comment="" />
+      <created>1626481250327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626481250327</updated>
+      <workItem from="1626481251780" duration="1618000" />
+      <workItem from="1626739224228" duration="514000" />
+      <workItem from="1626834876006" duration="210000" />
+      <workItem from="1626835317299" duration="191000" />
+    </task>
+    <task id="LOCAL-00001" summary="javase复习">
+      <created>1626481312410</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626481312410</updated>
+    </task>
+    <task id="LOCAL-00002" summary="javase复习">
+      <created>1626481406881</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626481406881</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="javase复习" />
+    <option name="LAST_COMMIT_MESSAGE" value="javase复习" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1626739540186">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.720@0.0.1280.720" timestamp="1626739540186" />
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626739406067">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1626739406067" />
+    <state x="244" y="0" key="CommitChangelistDialog2" timestamp="1626481406100">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="244" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1626481406100" />
+    <state x="420" y="101" key="FileChooserDialogImpl" timestamp="1626739733493">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="420" y="101" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1626739733493" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1626739721189">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1626739721189" />
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2" timestamp="1626481427663">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="94" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1626481427663" />
+    <state x="28" y="0" key="new project wizard" timestamp="1626482281201">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="28" y="0" key="new project wizard/0.0.1280.720@0.0.1280.720" timestamp="1626482281201" />
+  </component>
+</project>

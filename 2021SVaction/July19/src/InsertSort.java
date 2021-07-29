@@ -14,7 +14,7 @@ public class InsertSort {
         }
         for (int i = 1; i < array.length; i++) {
             //因为在j之前都是已经排好序的,所以一旦(array[j] > array[j + 1])条件不成立,就不必再循环
-            for (int j = i - 1; j >= 0 && array[j] > array[j + 1]; j++) {
+            for (int j = i - 1; j >= 0 && array[j] > array[j + 1]; j--) {
                     swap(array, j, j + 1);
             }
         }

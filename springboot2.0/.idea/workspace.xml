@@ -20,78 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b79ae0d7-bf82-40c7-acca-830ff54b004d" name="Default Changelist" comment="springbootTest&#10;出现导包有问题,直接重新创建一个项目">
-      <change afterPath="$PROJECT_DIR$/../.idea/javaCode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20200114/20200114.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20200121/20200121.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20201229/20201229.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20210101/20210101.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20210129/20210129.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20210202/20210202xml解析.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../20210209/20210209数据类型复习.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookManager/BookManager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cookie/Cookie.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DBUtils/DBUtils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo/Demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo1/Demo1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo1/out/out.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo2/Demo2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo3/Demo3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo3/javaCode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Goods/Goods.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Junit/Junit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SeqList/SeqList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../String/String.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baseAspectj_AOP/baseAspectj_AOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dadacar/dadacar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gc/gc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../inheritance/inheritance.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../javaweb01/javaweb01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp/jsp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../net/net.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../reflect/reflect.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet/servlet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/spring-baseJdkToAOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-managerBeanByAnnotation/spring-managerBeanByAnnotation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-managerBeanByXml/spring-managerBeanByXml.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-mybatis/spring_mybatis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/conf/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/conf/JdbcConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot2.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wj/springboot/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wj/springboot/conf/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wj/springboot/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wj/springboot/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wj/springboot/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springmvc/springmvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ssm/ssm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web_annotation/.idea/web_annotation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web_annotation/web_annotation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web_xml/web_xml.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xmlTest/xmlTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../单链表/单链表.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双向链表/双向链表.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../数据结构/包装类/包装类.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../数据结构/对象的比较和泛型/对象的比较和泛型.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../数据结构/线性表/线性表.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot1/.idea/artifacts/springboot1_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot1/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/conf/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/conf/JdbcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/src/main/java/com/wj/springboot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot1/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/META-INF/线性表.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +137,7 @@
       <workItem from="1618486120233" duration="4893000" />
       <workItem from="1618492432734" duration="593000" />
       <workItem from="1618636273625" duration="1361000" />
+      <workItem from="1620357945273" duration="45000" />
     </task>
     <servers />
   </component>
@@ -194,6 +154,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

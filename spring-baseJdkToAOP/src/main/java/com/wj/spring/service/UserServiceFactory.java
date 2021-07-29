@@ -12,11 +12,12 @@ public class UserServiceFactory {
 
     public UserService newUserServiceProxy() {
         //创建目标对象
-        UserServiceImpl userService = new UserServiceImpl();
+        final UserServiceImpl userService = new UserServiceImpl();
         //创建切面对象
-        MyAspect myAspect = new MyAspect();
+        final MyAspect myAspect = new MyAspect();
         //创建代理对象
-        return (UserService) Proxy.newProxyInstance(UserServiceFactory.class.getClassLoader(), UserServiceImpl.class.getInterfaces(), new InvocationHandler() {
+        return (UserService) Proxy.newProxyInstance(UserServiceFactory.class.getClassLoader(),
+                UserService.class.getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 if (method.getName().equals("addUser")) {

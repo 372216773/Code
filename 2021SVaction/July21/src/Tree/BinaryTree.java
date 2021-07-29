@@ -1,5 +1,7 @@
 package Tree;
 
+import javax.swing.*;
+
 class BTNode {
     String val;
     BTNode left;
@@ -35,6 +37,10 @@ public class BinaryTree {
     }
 
     //每一次递归调用函数,都会开辟栈帧,在没递归完时,就一直存在栈中
+
+    //遍历思路: 递归遍历,每次只要不空, size++;
+    //子问题思路: 要求整棵树的节点个数,左数+右树+1
+
     //前序遍历
     public void preOrderTraversal(BTNode root) {
         if (root == null) return;
@@ -60,35 +66,58 @@ public class BinaryTree {
     }
 
     static int size = 0;
+
     //遍历->求节点个数
     public void getSize(BTNode root) {
-
+        if (root == null) return;
+        size++;
+        getSize(root.left);
+        getSize(root.right);
     }
 
     //子问题思路->求节点个数
     public int getSize2(BTNode root) {
-        return 0;
+        if (root == null) return 0;
+        size = getSize2(root.left) + getSize2(root.right) + 1;
+        return size;
     }
 
     static int leftSize = 0;
-    //遍历思路->求叶子节点个数
-    public void getLeftSize1() {
 
+    //遍历思路->求叶子节点个数
+    public void getLeftSize1(BTNode root) {
+        if (root == null) return;
+        if (root.left == null && root.right == null) {
+            leftSize++;
+        }
+        getLeftSize1(root.left);
+        getLeftSize1(root.right);
     }
 
     //子问题思路->求叶子节点个数
     public int getLeftSize2(BTNode root) {
-        return 0;
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) {
+            return 1;
+        }
+        return getLeftSize2(root.left) + getLeftSize2(root.right);
     }
 
     //子问题思路->求第k层节点个数
-    public int getLevelSize(BTNode root) {
-        return 0;
+    public int getKLevelSize(BTNode root, int k) {
+        if (root == null) return 0;
+        if (k == 1) {
+            return 1;
+        }
+        return getKLevelSize(root.left, k - 1) + getKLevelSize(root.right, k - 1);
     }
 
-    //获取二叉树的高度
+    //获取二叉树的高度,最大深度
     public int getHeight(BTNode root) {
-        return 0;
+        if (root == null) return 0;
+        int leftHeight = getHeight(root.left);
+        int rightHeight = getHeight(root.right);
+        return leftHeight > rightHeight ? leftHeight + 1 : rightHeight + 1;
     }
 
     //

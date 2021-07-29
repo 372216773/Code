@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01ba10ec-1950-4b8d-a896-30df6253f5d5" name="Default Changelist" comment="" />
+    <list default="true" id="01ba10ec-1950-4b8d-a896-30df6253f5d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/spring_AOP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/springboot2.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../数据结构/线性表/src/nowCoder/solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/conf/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/conf/JdbcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/META-INF/线性表.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../baseAspectj_AOP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-managerBeanByAnnotation" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -36,6 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1616725189085</updated>
       <workItem from="1616725190575" duration="799000" />
+      <workItem from="1620913351352" duration="459000" />
+      <workItem from="1620994726992" duration="76000" />
     </task>
     <servers />
   </component>
@@ -43,10 +84,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="400" y="144" key="FileChooserDialogImpl" timestamp="1616726370793">
+    <state x="400" y="144" key="FileChooserDialogImpl" timestamp="1620913374092">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="400" y="144" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1616726370793" />
+    <state x="400" y="144" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620913374092" />
     <state width="758" height="176" key="GridCell.Tab.0.bottom" timestamp="1616725289818">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
