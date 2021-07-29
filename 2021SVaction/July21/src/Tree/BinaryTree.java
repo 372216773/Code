@@ -1,6 +1,8 @@
 package Tree;
 
 import javax.swing.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 class BTNode {
     char val;
@@ -147,6 +149,7 @@ public class BinaryTree {
         return null;
     }
 
+    //判断两棵树是否相同
     public boolean isSameTree(BTNode p, BTNode q) {
         if (p == null || q == null) return false;
 
@@ -160,6 +163,28 @@ public class BinaryTree {
         isSameTree(p.right,q.right);
 
         return true;
+    }
+
+    //层序遍历
+    public void levelOrderTraversal(BTNode root) {
+        if (root == null) return ;
+        Queue<BTNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()) {
+
+            //移除节点,cur的值进行更新
+            BTNode cur = queue.poll();
+            //打印节点的值
+            System.out.print(cur.val + " ");
+
+            if (cur.left != null) {
+                queue.offer(cur.left);
+            }
+            if (cur.right != null) {
+                queue.offer(cur.right);
+            }
+
+        }
     }
 
 

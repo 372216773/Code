@@ -18,5 +18,7 @@ public class Main {
         System.out.println(binaryTree.getHeight(root));
 
         System.out.println(binaryTree.find(root, 'd').val);
+
+        binaryTree.levelOrderTraversal(root);
     }
 }
