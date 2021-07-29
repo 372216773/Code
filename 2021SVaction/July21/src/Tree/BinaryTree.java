@@ -3,11 +3,11 @@ package Tree;
 import javax.swing.*;
 
 class BTNode {
-    String val;
+    char val;
     BTNode left;
     BTNode right;
 
-    public BTNode(String val) {
+    public BTNode(char val) {
         this.val = val;
     }
 
@@ -17,14 +17,14 @@ public class BinaryTree {
 
     //创建树🌳
     public BTNode createTree() {
-        BTNode A = new BTNode("a");
-        BTNode B = new BTNode("b");
-        BTNode C = new BTNode("c");
-        BTNode D = new BTNode("d");
-        BTNode E = new BTNode("e");
-        BTNode F = new BTNode("f");
-        BTNode G = new BTNode("g");
-        BTNode H = new BTNode("h");
+        BTNode A = new BTNode('a');
+        BTNode B = new BTNode('b');
+        BTNode C = new BTNode('c');
+        BTNode D = new BTNode('d');
+        BTNode E = new BTNode('e');
+        BTNode F = new BTNode('f');
+        BTNode G = new BTNode('g');
+        BTNode H = new BTNode('h');
 
         A.left = B;
         A.right = C;
@@ -121,8 +121,45 @@ public class BinaryTree {
     }
 
     //
-    public int find(BTNode root) {
-        return 0;
+    public BTNode find(BTNode root, char val) {
+        if (root == null) return null;
+
+        //根
+        if (root.val == val) {
+            return root;
+        }
+
+        //左子树
+        BTNode leftNode = find(root.left,val);
+        //得到返回值,不为null说明找到了,返回
+        if (leftNode != null) {
+            return leftNode;
+        }
+
+        //右子树
+        BTNode rightNode = find(root.right,val);
+        //得到返回值,不为null说明找到了,返回
+        if (rightNode != null) {
+            return rightNode;
+        }
+
+        //没有找到
+        return null;
+    }
+
+    public boolean isSameTree(BTNode p, BTNode q) {
+        if (p == null || q == null) return false;
+
+        //根
+        if (p.val != q.val) return false;
+
+        //左子树
+        isSameTree(p.left,q.left);
+
+        //右子树
+        isSameTree(p.right,q.right);
+
+        return true;
     }
 
 

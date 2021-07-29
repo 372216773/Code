@@ -16,5 +16,7 @@ public class Main {
         System.out.println(binaryTree.getLeftSize2(root));
         System.out.println(binaryTree.getKLevelSize(root,2));
         System.out.println(binaryTree.getHeight(root));
+
+        System.out.println(binaryTree.find(root, 'd').val);
     }
 }
