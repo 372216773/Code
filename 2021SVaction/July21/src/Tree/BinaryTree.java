@@ -1,7 +1,9 @@
 package Tree;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 class BTNode {
@@ -166,25 +168,35 @@ public class BinaryTree {
     }
 
     //层序遍历
-    public void levelOrderTraversal(BTNode root) {
-        if (root == null) return ;
+    public List<List<Character>> levelOrder(BTNode root) {
+        List<List<Character>> list = new ArrayList<>();
+
+        if (root == null) return list;
+        //队列
         Queue<BTNode> queue = new LinkedList<>();
+
+        //最开始有一个节点值
         queue.offer(root);
+
         while(!queue.isEmpty()) {
-
-            //移除节点,cur的值进行更新
-            BTNode cur = queue.poll();
-            //打印节点的值
-            System.out.print(cur.val + " ");
-
-            if (cur.left != null) {
-                queue.offer(cur.left);
+            List<Character> list1 = new ArrayList<>();
+            int size = queue.size();
+            while (size > 0) {
+                //cur用于遍历
+                BTNode cur = queue.poll();
+                //
+                list1.add(cur.val);
+                if (cur.left != null) {
+                    queue.offer(cur.left);
+                }
+                if (cur.right != null) {
+                    queue.offer(cur.right);
+                }
+                size --;
             }
-            if (cur.right != null) {
-                queue.offer(cur.right);
-            }
-
+            list.add(list1);
         }
+        return list;
     }
 
 
