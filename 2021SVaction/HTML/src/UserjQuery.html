@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--引用script调用jQuery-->
+    <script src="jquery-1.9.1.min.js"></script>
+    <script>
+        function MyClick(type) {
+
+            //jQuery("#username");就相当于id选择器,可以拿到标签元素
+            let username = jQuery("#username");
+            let password = jQuery("#password");
+
+            if (type == 1) {
+                //trim()去空格
+                if (username.val().trim() == "") {
+                    alert("请输入用户名");
+                    //光标移到id = username的标签上
+                    username.focus();
+                    return;
+                }
+                if (password.val().trim() == "") {
+                    alert("请输入密码");
+                    password.focus();
+                    return;
+                }
+                if (username.val() != "王京" || password.val() != "123") {
+                    alert("登陆失败,请重新输入");
+                    return;
+                }
+                alert("登陆成功");
+            } else if (type == 2) {
+                username.val("");
+                password.val("");
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>登录界面</div>
+<p></p>
+<input id="username" type="text" placeholder="请输入账号">
+<p></p>
+<input id="password" type="text" placeholder="请输入密码">
+<p></p>
+<input type="button" value="提交" onclick="MyClick(1)">
+<input type="button" value="清空" onclick="MyClick(2)">
+</body>
+</html>
