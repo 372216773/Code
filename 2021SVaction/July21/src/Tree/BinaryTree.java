@@ -1,10 +1,6 @@
 package Tree;
 
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 class BTNode {
     char val;
@@ -67,6 +63,68 @@ public class BinaryTree {
         postOrderTraversal(root.left);
         postOrderTraversal(root.right);
         System.out.print(root.val);
+    }
+
+    //非递归
+    //前序遍历
+    public void preOrderTraversalNor(BTNode root) {
+        Stack<BTNode> stack = new Stack<>();
+        BTNode cur = root;
+        //如果一个结点的left和right都为null,就说明这个节点走完了,开始弹栈,获取到父节点
+        while (cur != null || !stack.empty()) {
+            //遍历左节点,并打印,遍历完后cur == null
+            while (cur != null) {
+                stack.push(cur);
+                System.out.print(cur.val + " ");
+                cur = cur.left;
+            }
+            //当前cur.left为null,就开始弹栈,获取right的节点,打印存在栈中的父节点的left节点
+            BTNode top = stack.pop();
+            //走向右节点
+            cur = top.right;
+        }
+    }
+
+    //中序遍历
+    public void inOrderTraversalNor(BTNode root) {
+        Stack<BTNode> stack = new Stack<>();
+        BTNode cur = root;
+        //左节点遍历完,存到栈中
+        while (cur != null || !stack.empty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            //cur == null,从栈中取出上一级的节点,并打印
+            BTNode top = stack.pop();
+            System.out.print(top.val + " ");
+            //开始遍历右节点
+            cur = top.right;
+        }
+    }
+
+    //后序遍历
+    public void postOrderTraversalNor(BTNode root) {
+        Stack<BTNode> stack = new Stack<>();
+        BTNode cur = root;
+        BTNode prev = null;
+        while (cur != null || !stack.empty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            //看一下栈顶元素
+            BTNode top = stack.peek();
+
+            //终止条件
+            if (top.right == null || top.right == prev) {
+                stack.pop();
+                System.out.print(top.val + " ");
+                prev = top;
+            } else {
+                cur = top.right;
+            }
+        }
     }
 
     static int size = 0;
@@ -134,14 +192,14 @@ public class BinaryTree {
         }
 
         //左子树
-        BTNode leftNode = find(root.left,val);
+        BTNode leftNode = find(root.left, val);
         //得到返回值,不为null说明找到了,返回
         if (leftNode != null) {
             return leftNode;
         }
 
         //右子树
-        BTNode rightNode = find(root.right,val);
+        BTNode rightNode = find(root.right, val);
         //得到返回值,不为null说明找到了,返回
         if (rightNode != null) {
             return rightNode;
@@ -159,10 +217,10 @@ public class BinaryTree {
         if (p.val != q.val) return false;
 
         //左子树
-        isSameTree(p.left,q.left);
+        isSameTree(p.left, q.left);
 
         //右子树
-        isSameTree(p.right,q.right);
+        isSameTree(p.right, q.right);
 
         return true;
     }
@@ -178,7 +236,7 @@ public class BinaryTree {
         //最开始有一个节点值
         queue.offer(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             List<Character> list1 = new ArrayList<>();
             int size = queue.size();
             while (size > 0) {
@@ -192,12 +250,11 @@ public class BinaryTree {
                 if (cur.right != null) {
                     queue.offer(cur.right);
                 }
-                size --;
+                size--;
             }
             list.add(list1);
         }
         return list;
     }
-
 
 }

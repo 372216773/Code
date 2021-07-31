@@ -19,6 +19,10 @@ public class Main {
 
         System.out.println(binaryTree.find(root, 'd').val);
 
-        binaryTree.levelOrderTraversal(root);
+        binaryTree.preOrderTraversalNor(root);
+        System.out.println();
+        binaryTree.inOrderTraversalNor(root);
+        System.out.println();
+        binaryTree.postOrderTraversalNor(root);
     }
 }
