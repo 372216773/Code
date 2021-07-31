@@ -15,6 +15,9 @@ class BTNode {
 
 public class BinaryTree {
 
+    //用来遍历字符串
+    public static int i = 0;
+
     //创建树🌳
     public BTNode createTree() {
         BTNode A = new BTNode('a');
@@ -34,6 +37,20 @@ public class BinaryTree {
         C.right = G;
         E.right = H;
         return A;
+    }
+
+    public static BTNode createBinaryTree(String string) {
+        if (string == null) return null;
+        BTNode root = null;
+        if (string.charAt(i) != '#') {
+            root = new BTNode(string.charAt(i));
+            i++;
+            root.left = createBinaryTree(string);
+            root.right = createBinaryTree(string);
+        } else {
+            i++;
+        }
+        return root;
     }
 
     //每一次递归调用函数,都会开辟栈帧,在没递归完时,就一直存在栈中
@@ -255,6 +272,33 @@ public class BinaryTree {
             list.add(list1);
         }
         return list;
+    }
+
+    //判断是否是完全二叉树
+    public boolean isCompleteTree(BTNode root) {
+        //队列:先进先出
+        Queue<BTNode> queue = new LinkedList<>();
+        if (root == null) return true;
+        queue.offer(root);
+        while (true) {
+            //遍历 a|b c|
+            BTNode cur = queue.poll();
+            if (cur != null) {
+                queue.offer(cur.left);
+                queue.offer(cur.right);
+            } else {
+                break;
+            }
+        }
+
+        while (!queue.isEmpty()) {
+            BTNode cur = queue.poll();
+            if (cur != null) {
+                return false;
+            }
+        }
+        return true;
+
     }
 
 }

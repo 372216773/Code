@@ -24,5 +24,11 @@ public class Main {
         binaryTree.inOrderTraversalNor(root);
         System.out.println();
         binaryTree.postOrderTraversalNor(root);
+
+        //构造二叉树
+        String string = "abc##de##g##f###";
+        BTNode root1 = BinaryTree.createBinaryTree(string);
+        binaryTree.preOrderTraversal(root1);
+
     }
 }
