@@ -4,24 +4,14 @@
     <!-- 编码格式 -->
     <meta charset="utf-8">
     <title>这是标题</title>
-    <!--定义全局样式-->
-    <style>
-        .img1 {
-            height: 150px;
-            width: 250px;
-        }
-
-        /*选择器优先级: 单独设置的样式 > 选择器设置的样式*/
-        div {
-            background-color: bisque;
-        }
-    </style>
+    <!--link引入外部资源,rel确定资源的类型-->
+    <link href="css.css" rel="stylesheet">
 
     <!--js脚本-->
     <!--设置点击事件-->
     <script>
 
-        var i = 10;
+        const i = 10;
 
         document.write("<h3>js的document输出的内容:</h3>");
 
@@ -56,7 +46,7 @@
             /*获取id==name的标签中的值*/
             //document.getElementById("name").value;
             //alert(document.getElementById("name").value);
-            var username = document.getElementById("name").value;
+            const username = document.getElementById("name").value;
             if (username == "") {
                 alert("请输入用户名");
             } else {
@@ -170,6 +160,12 @@ br标签换行间距较小<br>
 比较换行间距:<br>
 
 
+<!--ul{
+/*去除列表前边的样式*/
+list-style: none;
+}
+-->
+
 <!-- 有序列表 -->
 <h3>有序列表</h3>
 <ol>
@@ -220,10 +216,83 @@ br标签换行间距较小<br>
 <!--div盒子容器-->
 <div>div</div>
 
-<!-- 表格标签 -->
-<table>
+<!-- 表格标签 tr:行 td:列 -->
+<!-- cellspacing 外边距 -->
+<!-- width:表格宽度
+     height:表格高度
+     border:规定表格边框宽度
+     cellspacing:规定单元格之间的空白。
+     cellpadding:规定单元边沿与其内容之间的空白。
+     align:单元格内容对齐方式
+     colspan:一列和一列的单元格合并
+     rowspan:一行和一行的单元格合并
+-->
 
+<p></p>
+<div style="width: auto; height: 4px; background-color: red"></div>
+<p></p>
+
+<!-- 表格标签 -->
+<table cellspacing =0px cellpadding = 0px>
+    <tr>
+        <th colspan="5">标题</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
 </table>
+
+<p></p>
+<div style="width: auto; height: 4px; background-color: red"></div>
+<p></p>
+
+<!-- 文章标签 -->
+<div>文章标签</div>
+<header>网页内容的头部(logo)</header>
+<article>鲁迅（1881年9月25日～1936年10月19日），原名周樟寿，后改名周树人，字豫山，后改字豫才，浙江绍兴人。著名文学家、思想家、革命家、教育家 [179]  、民主战士，新文化运动的重要参与者，中国现代文学的奠基人之一。
+    早年与厉绥之和钱均夫同赴日本公费留学，于日本仙台医科专门学校肄业。“鲁迅”，1918年发表《狂人日记》时所用的笔名，也是最为广泛的笔名。 [1-7]
+    鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译、美术理论引进、基础科学介绍和古籍校勘与研究等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，尤其在韩国、日本思想文化领域有极其重要的地位和影响，被誉为“二十世纪东亚文化地图上占最大领土的作家”。 [8-10]
+    毛泽东曾评价：“鲁迅的方向，就是中华民族新文化的方向。”</article>
+<footer>网页内容的尾部</footer>
+
+<p></p>
+<div style="width: auto; height: 4px; background-color: red"></div>
+<p></p>
+
+<!-- 音频标签 -->
+<div>音频标签</div>
+<!-- src:媒体路径 controls:控制栏显示 -->
+<audio id="audio" src="可能性.mp3" controls></audio>
+
+<p></p>
+<div style="width: auto; height: 4px; background-color: red"></div>
+<p></p>
+
 
 </body>
 </html>

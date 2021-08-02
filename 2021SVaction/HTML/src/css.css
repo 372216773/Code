@@ -1,0 +1,29 @@
+.img1 {
+    height: 150px;
+    width: 250px;
+}
+
+/*选择器优先级: 单独设置的样式 > 选择器设置的样式*/
+div {
+    background-color: bisque;
+}
+
+table {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+}
+td {
+    border: 1px solid red;
+    /*规定元素中的内容的水平对齐方式*/
+    text-align: center;
+}
+th {
+    border: 1px black solid;
+}
+
+#audio {
+    display: flex;
+    margin: 0 auto;
+}

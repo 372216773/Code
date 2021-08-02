@@ -1,0 +1,444 @@
+body {
+    margin: 0;
+    background-color: #edf1f7;
+}
+h1 {
+    margin: 0;
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+/*包含以下五种的链接*/
+/*正常的未被访问过的链接*/
+a:link {
+    text-decoration: none;
+}
+/*已经访问过的链接*/
+a:visited {
+    text-decoration: none;
+}
+/*鼠标划过(停留)的链接*/
+a:hover {
+    text-decoration: none;
+    color: #31abff;
+}
+/* 正在点击的链接，鼠标在元素上按下还没有松开*/
+a:active {
+    text-decoration: none;
+}
+/* 获得焦点的时候 鼠标松开时显示的颜色*/
+a:focus {
+    text-decoration: none;
+}
+#header_bottom {
+    height: 80px;
+    width: 100%;
+}
+#header_bottom_1 {
+    width: 940px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    /*盒子中的内容居中显示*/
+    align-items: center;
+}
+#img {
+    width: 144px;
+    height: 80px;
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/logo-f43221a62a.png") center no-repeat;
+    margin-right: 40px;
+}
+#header_bottom_1_1 {
+    width: 300px;
+    height: 80px;
+}
+#header_bottom_1_1_ul {
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_bottom_1_1_1 {
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+}
+.header_bottom_1_1_1 a{
+    color: #5e687d;
+}
+.header_bottom_1_1_1 a {
+    line-height: 80px;
+    text-align: center;
+}
+.header_bottom_1_1_1 a:hover {
+    background-color: #f7f9fa;
+}
+#search {
+    width: 414px;
+    height: 40px;
+    margin-left: 40px;
+}
+#label {
+    width: 414px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+}
+#input {
+    width: 374px;
+    height: 36px;
+    padding: 0;
+    border: 2px solid #33acff;
+}
+#button {
+    display: block;
+    height: 40px;
+    width: 36px;
+    border: 2px solid #33acff;
+    padding: 0;
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/search-btn-2d7cf7d81a.png") center no-repeat #33acff;
+    /*鼠标指向样式改变*/
+    cursor: pointer;
+}
+#header {
+    height: 429px;
+    width: 100%;
+    background-color:  #4b68f9;
+}
+#header1 {
+    height: 429px;
+    margin: 0 auto;
+    background: url("https://pc2.gtimg.com/softmgr/picture/v3/subject/47937044f464ac59003dae1436250c13.png") center no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*盒子中的内容居中显示*/
+    align-items: center;
+}
+#header_1_1 {
+    width: 500px;
+    height: 313px;
+    background: url("https://pc2.gtimg.com/softmgr/picture/v3/subject/a2d57e34169d61e0f95df0c39c4705e8.png") no-repeat;
+}
+#header_1_2 {
+    width: 369px;
+    height: 257px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+}
+#header_1_2 ul {
+    color: #f7f9fa;
+}
+#header_1_2 ul>li:nth-child(1) {
+    font-size: 41px;
+}
+#header_1_2 ul>li:nth-child(2) {
+    font-size: 23px;
+}
+#header_1_2 ul>li:nth-child(3) a {
+    width: 153px;
+    height: 47px;
+    background-color: #0bd055;
+    border: 0;
+    color: #f7f9fa;
+    margin-top: 46px;
+    margin-bottom: 26px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 22px;
+}
+#header_1_2 ul>li:nth-child(4) {
+    font-size: 14px;
+}
+
+#main_body {
+    height: 1927px;
+    width: 960px;
+    background-color: antiquewhite;
+    margin: 33px auto 3px;
+}
+
+#main_body_1 {
+    height: 224px;
+}
+#main_body_1_ul {
+    width: 960px;
+    height: 224px;
+    display: flex;
+    /*从左往右依次排列*/
+    flex-direction: row;
+    /*左右*/
+    justify-content: space-around;
+    /*上下*/
+    /*align-items: center;*/
+}
+#main_body_1 li {
+    width: 220px;
+    height: 204px;
+    background-color: #f7f9fa;
+}
+#main_body_1_ul_li_1_a {
+    width: 220px;
+    height: 204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#main_body_1_ul_li_1_div1 {
+    background: url("https://pc3.gtimg.com/softmgr/picture/web/banner/ac4f91ae41cda43113f855d70743e6a3.png") no-repeat;
+    width: 220px;
+    height: 140px;
+}
+#main_body_1_ul_li_2_div1 {
+    background: url("https://pc3.gtimg.com/softmgr/picture/web/banner/5f62da690dfce0f2697dc1d5e02e9e86.png") no-repeat;
+    width: 220px;
+    height: 140px;
+}
+#main_body_1_ul_li_3_div1 {
+    background: url("https://pc3.gtimg.com/softmgr/picture/web/banner/40312784b351c6925ed6f0295cc29a9f.jpg") no-repeat;
+    width: 220px;
+    height: 140px;
+}
+#main_body_1_ul_li_4_div1 {
+    background: url("https://pc3.gtimg.com/softmgr/picture/web/banner/69518df1f17d472b6f399c88aa197246.png") no-repeat;
+    width: 220px;
+    height: 140px;
+}
+#main_body_1_ul_li_1_div2, #main_body_1_ul_li_2_div2, #main_body_1_ul_li_3_div2, #main_body_1_ul_li_4_div2 {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 64px;
+}
+#main_body_1_ul_li_1_div2_div1, #main_body_1_ul_li_2_div2_div1, #main_body_1_ul_li_3_div2_div1, #main_body_1_ul_li_4_div2_div1 {
+    font-weight: 400;
+    color: #39404d;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 12px;
+}
+#main_body_1_ul_li_1_div2_div2, #main_body_1_ul_li_2_div2_div2, #main_body_1_ul_li_3_div2_div2, #main_body_1_ul_li_4_div2_div2 {
+    font-size: 12px;
+    color: #838b9b;
+    padding-left: 6px;
+    padding-right: 12px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+#main_body_2 {
+    width: 960px;
+    height: 273px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+#left, #right {
+    display: inline-block;
+}
+#left {
+    width: 700px;
+    height: 273px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#left_title {
+    width: 700px;
+    height: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #5e687d;
+    display: flex;
+    margin-bottom: 6px;
+}
+#left_title i {
+    display: flex;
+    width: 18px;
+    height: 28px;
+    margin-right: 6px;
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/recommend-d3f892703a.png") center no-repeat;
+}
+#left_contains {
+    width: 710px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+    /*让弹性盒元素在必要的时候拆行*/
+    flex-wrap: wrap;
+}
+#left_contains_1 a, #left_contains_2 a, #left_contains_3 a, #left_contains_4 a {
+    width: 345px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f9fa;
+    display: flex;
+    flex-direction: row;
+}
+#left_contains_1 a>div:nth-child(1), #left_contains_2 a>div:nth-child(1), #left_contains_3 a>div:nth-child(1), #left_contains_4 a>div:nth-child(1) {
+    width: 48px;
+    height: 48px;
+    margin: 26px 12px auto 22px;
+}
+#left_contains_1 a>div:nth-child(2), #left_contains_2 a>div:nth-child(2), #left_contains_3 a>div:nth-child(2), #left_contains_4 a>div:nth-child(2) {
+    width: 241px;
+    height: 104px;
+}
+#left_contains_1_txt, #left_contains_2_txt, #left_contains_3_txt, #left_contains_4_txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 32px;
+    font-size: 14px;
+    font-weight: 400;
+}
+#left_contains_1_txt>div:nth-child(2), #left_contains_2_txt>div:nth-child(2), #left_contains_3_txt>div:nth-child(2), #left_contains_4_txt>div:nth-child(2) {
+    font-size: 12px;
+    color: #8d9ab2;
+}
+#left_contains_1_txt~div, #left_contains_2_txt~div, #left_contains_3_txt~div, #left_contains_4_txt~div {
+    padding-top: 12px;
+    padding-right: 75px;
+    font-size: 12px;
+    color: #8a8f99;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+#right {
+    width: 220px;
+    height: 265px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#right_title {
+    display: flex;
+    width: 220px;
+    height: 28px;
+    margin-bottom: 5px;
+    line-height: 28px;
+    color: #5e687d;
+}
+#right_title i {
+    display: flex;
+    width: 19px;
+    height: 28px;
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/top-de928bfbde.png") center no-repeat;
+}
+#right_contains {
+    width: 220px;
+    height: 210px;
+    background-color: white;
+}
+#right_contains>div:nth-child(1) {
+    background-color: #50d8a3;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    line-height: 35px;
+}
+#right_contains>div:nth-child(1) img {
+    margin-left: 10px;
+    margin-right: 6px;
+}
+#right_contains_table {
+    width: 204px;
+    height: 169px;
+    margin: 6px 16px auto 0;
+}
+#right_contains_table ul>li:nth-child(1), #right_contains_table ul>li:nth-child(2), #right_contains_table ul>li:nth-child(3) {
+    width: 190px;
+    height: 38px;
+    margin-left: 14px;
+}
+#right_contains_table ul>li:nth-child(4), #right_contains_table ul>li:nth-child(5) {
+    width: 190px;
+    height: 26px;
+    margin-left: 14px;
+}
+#right_contains_table ul>li>a {
+    width: 190px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#right_contains_table ul>li>a>div:nth-child(1) {
+    width: 122px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+}
+#right_contains_table ul>li>a>div:nth-child(1)>i {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    margin-top: 13px;
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") no-repeat;
+}
+#right_contains_table ul>li:nth-child(1)>a>div>i {
+    background-position: 0 0;
+}
+#right_contains_table ul>li:nth-child(2)>a>div>i {
+    background-position: -14px 0;
+}
+#right_contains_table ul>li:nth-child(3)>a>div>i {
+    background-position: -28px 0;
+}
+#right_contains_table ul>li:nth-child(4)>a>div>i {
+    background-position: -42px 0;
+}
+#right_contains_table ul>li:nth-child(5)>a>div>i {
+    background-position: -56px 0;
+}
+#right_contains_table ul>li>a>div>img {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+#right_contains_table ul>li>a>div:nth-child(1)>a {
+    width: 60px;
+    height: 24px;
+}
+.div1 {
+    display: flex;
+    color: #39404d;
+    font-size: 12px;
+    line-height: 38px;
+}
+.div2 {
+    color: #8a8f99;
+    font-size: 12px;
+    line-height: 38px;
+}
+#footer {
+    height: 118px;
+    width: 1200px;
+    background-color: antiquewhite;
+    margin: 0 auto 3px;
+}
