@@ -166,14 +166,11 @@ a:focus {
 #header_1_2 ul>li:nth-child(4) {
     font-size: 14px;
 }
-
 #main_body {
     height: 1927px;
-    width: 960px;
-    background-color: antiquewhite;
+    width: 100%;
     margin: 33px auto 3px;
 }
-
 #main_body_1 {
     height: 224px;
 }
@@ -369,72 +366,108 @@ a:focus {
     height: 169px;
     margin: 6px 16px auto 0;
 }
-#right_contains_table ul>li:nth-child(1), #right_contains_table ul>li:nth-child(2), #right_contains_table ul>li:nth-child(3) {
-    width: 190px;
-    height: 38px;
-    margin-left: 14px;
-}
-#right_contains_table ul>li:nth-child(4), #right_contains_table ul>li:nth-child(5) {
-    width: 190px;
-    height: 26px;
-    margin-left: 14px;
-}
-#right_contains_table ul>li>a {
+#right_contains_table>ul>li:nth-child(1)>a, #right_contains_table>ul>li:nth-child(2)>a, #right_contains_table>ul>li:nth-child(3)>a {
     width: 190px;
     height: 38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 14px;
 }
-#right_contains_table ul>li>a>div:nth-child(1) {
-    width: 122px;
-    height: 24px;
+#right_contains_table>ul>li:nth-child(4)>a, #right_contains_table>ul>li:nth-child(5)>a {
+    width: 190px;
+    height: 26px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-left: 14px;
 }
-#right_contains_table ul>li>a>div:nth-child(1)>i {
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1), #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1) {
+    width: 108px;
+    height: 38px;
     display: flex;
+    flex-direction: row;
+    justify-content: normal;
+}
+#right_contains_table>ul>li:nth-child(4)>a>div:nth-child(1), #right_contains_table>ul>li:nth-child(5)>a>div:nth-child(1) {
+    width: 95px;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+}
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(1), #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(1), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(1) {
     width: 14px;
     height: 14px;
     margin-top: 13px;
-    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") no-repeat;
+    margin-right: 5px;
 }
-#right_contains_table ul>li:nth-child(1)>a>div>i {
-    background-position: 0 0;
+#right_contains_table>ul>li:nth-child(4)>a>div:nth-child(1)>div:nth-child(1), #right_contains_table>ul>li:nth-child(5)>a>div:nth-child(1)>div:nth-child(1) {
+    width: 14px;
+    height: 14px;
+    margin-top: 6px;
+    margin-right: 5px;
 }
-#right_contains_table ul>li:nth-child(2)>a>div>i {
-    background-position: -14px 0;
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(1) {
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") 0 0;
 }
-#right_contains_table ul>li:nth-child(3)>a>div>i {
-    background-position: -28px 0;
+#right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(1) {
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") -14px 0;
 }
-#right_contains_table ul>li:nth-child(4)>a>div>i {
-    background-position: -42px 0;
+#right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(1) {
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") -28px 0;
 }
-#right_contains_table ul>li:nth-child(5)>a>div>i {
-    background-position: -56px 0;
+#right_contains_table>ul>li:nth-child(4)>a>div:nth-child(1)>div:nth-child(1) {
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") -42px 0;
 }
-#right_contains_table ul>li>a>div>img {
-    display: flex;
+#right_contains_table>ul>li:nth-child(5)>a>div:nth-child(1)>div:nth-child(1) {
+    background: url("https://pc1.gtimg.com/finance/softweb/dist/img/number-2a4d3a2048.png") -56px 0;
+}
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(2), #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(2), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(2) {
     width: 24px;
     height: 24px;
     margin-top: 7px;
     margin-right: 5px;
 }
-#right_contains_table ul>li>a>div:nth-child(1)>a {
-    width: 60px;
-    height: 24px;
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(2) {
+    background: url("https://pc3.gtimg.com/softmgr/logo/48/2_48_1482283025.png") round;
 }
-.div1 {
-    display: flex;
+#right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(2) {
+    background: url("https://pc3.gtimg.com/softmgr/logo/48/12_48_1481853731.png") round;
+}
+#right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(2) {
+    background: url("https://pc3.gtimg.com/softmgr/logo/48/11488_48_1616464914.png") round;
+}
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(3), #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(3), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(3) {
+    font-size: 12px;
     color: #39404d;
-    font-size: 12px;
+    width: 60px;
+    height: 38px;
     line-height: 38px;
 }
-.div2 {
-    color: #8a8f99;
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(1)>div:nth-child(3):hover, #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(1)>div:nth-child(3):hover, #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(1)>div:nth-child(3):hover, #right_contains_table>ul>li:nth-child(4)>a>div:nth-child(1)>div:nth-child(2):hover, #right_contains_table>ul>li:nth-child(5)>a>div:nth-child(1)>div:nth-child(2):hover {
+    color: #31abff;
+}
+#right_contains_table>ul>li:nth-child(4)>a>div:nth-child(1)>div:nth-child(2), #right_contains_table>ul>li:nth-child(5)>a>div:nth-child(1)>div:nth-child(2) {
     font-size: 12px;
+    color: #39404d;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+}
+#right_contains_table>ul>li:nth-child(1)>a>div:nth-child(2), #right_contains_table>ul>li:nth-child(2)>a>div:nth-child(2), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(2), #right_contains_table>ul>li:nth-child(3)>a>div:nth-child(2) {
+    width: 61px;
+    height: 38px;
     line-height: 38px;
+    font-size: 12px;
+    color: #8a8f99;
+}
+#right_contains_table>ul>li:nth-child(4)>a>div:nth-child(2), #right_contains_table>ul>li:nth-child(5)>a>div:nth-child(2) {
+    width: 61px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #8a8f99;
 }
 #footer {
     height: 118px;
