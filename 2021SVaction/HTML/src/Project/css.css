@@ -201,7 +201,7 @@ a:focus {
 #main_body {
     height: 1927px;
     width: 100%;
-    margin: 33px auto 3px;
+    margin: 33px auto 50px;
 }
 
 #main_body1 {
@@ -1078,9 +1078,20 @@ a:focus {
 }
 
 .left_contains_bottom {
-    width: 710px;
+    width: 700px;
     height: 42px;
     background-color: white;
+}
+
+.left_contains_bottom>a {
+    color: #5e687d;
+    width: 700px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+}
+.left_contains_bottom>a:hover {
+    text-decoration: revert;
 }
 
 #main_body_5 > div:nth-child(1) > div {
@@ -1214,6 +1225,89 @@ a:focus {
     background: url("https://pc1.gtimg.com/finance/softweb/dist/img/star-24ab2c3064.png") repeat-x;
 }
 
-#footer {
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul {
+    width: 220px;
+    height: 732px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li>a {
+    width: 178px;
+    height: 138px;
+}
+
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li:nth-child(1)>a {
+    margin-top: 16px;
+    background: url("https://pc2.gtimg.com/guanjia/gjalpha/file/e7/ff/e7ff8e8fb4c231caf6fcf003ab22ed0a.png") no-repeat;
+}
+
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li:nth-child(2) {
+    background: url("https://pc2.gtimg.com/guanjia/gjalpha/file/dc/94/dc94095d4fe979089b326d52b520a195.png") no-repeat;
+}
+
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li:nth-child(3) {
+    background: url("https://pc2.gtimg.com/guanjia/gjalpha/file/30/ca/30ca3d72e13a6c02e0b23d3e780b7f4c.png") no-repeat;
+}
+
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li:nth-child(4) {
+    background: url("https://pc2.gtimg.com/guanjia/gjalpha/file/25/61/2561ac91f35fe9b508f48b2c9e338b5c.png") no-repeat;
+}
+
+#main_body_5>div:nth-child(2)>div:nth-child(2)>ul>li:nth-child(5) {
+    background: url("https://pc2.gtimg.com/guanjia/gjalpha/file/3e/46/3e46205ced195d1ab560438530c24a3e.png") no-repeat;
+}
+
+#footer>div {
+    width: 940px;
+    height: 119px;
+    margin: 10px auto;
+}
+
+#footer>div>ul {
+    width: 940px;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /*让弹性盒元素在必要的时候拆行*/
+    flex-wrap: wrap;
+}
+
+#footer>div>ul>li {
+    width: 112px;
+    height: 23px;
+    margin: 0 10px;
+}
+
+#footer>div>ul>li>a {
+    width: 112px;
+    height: 23px;
+    color: #9d9d9d;
+}
+
+#footer>p {
+    text-decoration: none;
+}
+
+#footer>p>i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    color: #b2b2b2;
+    font-size: 12px;
+}
+
+#footer>p>i>a {
+    font-size: 12px;
+    color: #b2b2b2;
+    padding: 0 10px;
+}
+
+#footer>p>i>a:hover {
+    color: #9d9d9d;
+    text-decoration: revert;
 }
