@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<member>
+    <star id="001">
+        <name>麦当</name>
+        <age>15</age>
+        <sex>男</sex>
+    </star>
+    <star id="002">
+        <name>迪亚</name>
+        <age>13</age>
+        <sex>女</sex>
+    </star>
+    <star id="003">
+        <name>咕咚</name>
+        <age>14</age>
+        <sex>男</sex>
+    </star>
+    <star id="004">
+        <name>米龙</name>
+        <age>16</age>
+        <sex>男</sex>
+    </star>
+</member>
