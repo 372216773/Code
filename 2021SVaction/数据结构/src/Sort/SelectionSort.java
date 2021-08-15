@@ -25,11 +25,16 @@ public class SelectionSort {
         arr[j] = tmp;
     }
 
-    public static void main(String[] args) {
-        int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-        selectionSort(array);
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+    /*
+    0^N=N;
+    N^N=0;
+    异或使用条件,必须是两块空间
+     */
+    private static void swap1(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
     }
+
+
 }
