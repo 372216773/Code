@@ -9,7 +9,8 @@ import java.util.Vector;
 /*
 绘图区域
  */
-public class MyPanel extends JPanel implements KeyListener {
+//为了一直重绘子弹,就把MyPanel作为线程使用
+public class MyPanel extends JPanel implements KeyListener,Runnable {
     //定义坦克
     Hero hero = null;
     Vector<Enemy> enemies = new Vector<>();
@@ -21,7 +22,7 @@ public class MyPanel extends JPanel implements KeyListener {
         //初始化坦克,初始方位,速度
         hero = new Hero(0, 0, 3);
         for (int i = 0; i < this.enemyNum; i++) {
-            enemies.add(new Enemy(100*(i+1), 0, 1));
+            enemies.add(new Enemy(100 * (i + 1), 0, 1));
         }
     }
 
@@ -36,6 +37,11 @@ public class MyPanel extends JPanel implements KeyListener {
             Enemy enemy = enemies.get(i);
             drawTank(enemy.getX(), enemy.getY(), g, "enemy", enemy.getDirection());
         }
+        //hero的子弹
+        if (hero.shoot != null && hero.shoot.isLive) {
+            g.fill3DRect(hero.shoot.x, hero.shoot.y, 4, 4,false);
+        }
+
     }
 
     /**
@@ -147,7 +153,7 @@ public class MyPanel extends JPanel implements KeyListener {
                 break;
             case KeyEvent.VK_DOWN:
                 hero.setDirection("down");
-                if (hero.getY()+60 < this.getHeight()) {
+                if (hero.getY() + 60 < this.getHeight()) {
                     hero.MoveDown();
                 }
                 System.out.println("x:  " + hero.getX() + "y:  " + hero.getY());
@@ -161,10 +167,13 @@ public class MyPanel extends JPanel implements KeyListener {
                 break;
             case KeyEvent.VK_RIGHT:
                 hero.setDirection("right");
-                if (hero.getX()+60 < this.getWidth()) {
+                if (hero.getX() + 60 < this.getWidth()) {
                     hero.MoveRight();
                 }
                 System.out.println("x:  " + hero.getX() + "y:  " + hero.getY());
+                break;
+            case KeyEvent.VK_J:
+                hero.shooting();
                 break;
         }
         repaint();
@@ -189,5 +198,18 @@ public class MyPanel extends JPanel implements KeyListener {
 
     public int getHeight() {
         return this.Height;
+    }
+
+    //每隔100ms重绘区域
+    @Override
+    public void run() {
+        while(true) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            this.repaint();
+        }
     }
 }

@@ -13,6 +13,8 @@ public class Game extends JFrame {
         panel.setHeight(800);
         //把画板放到窗口
         this.add(panel);
+        Thread thread = new Thread(panel);
+        thread.start();
         //添加键盘监听事件
         this.addKeyListener(panel);
         //设置窗口的宽高
