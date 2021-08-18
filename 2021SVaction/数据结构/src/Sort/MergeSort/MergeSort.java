@@ -1,4 +1,4 @@
-package Sort;
+package Sort.MergeSort;
 
 //归并排序
 public class MergeSort {
@@ -9,12 +9,13 @@ public class MergeSort {
 
     public static void process(int[] arr, int L, int R) {
         if (L == R) return;
-        int mid = L + (R - L) >> 1;
+        int mid = L + ((R - L) >> 1);
         process(arr, L, mid);
         process(arr, mid + 1, R);
         merge(arr, L, mid, R);
     }
 
+    //排序
     public static void merge(int[] arr, int L, int mid, int R) {
         //定义辅助数组
         int[] help = new int[R - L + 1];
@@ -31,8 +32,9 @@ public class MergeSort {
         while (p2 <= R) {
             help[i++] = arr[p2++];
         }
-        for (int j = 0; j < arr.length; j++) {
-            arr[j] = help[j];
+        for (int j = 0; j < help.length; j++) {
+            arr[L++] = help[j];
+
         }
     }
 }
