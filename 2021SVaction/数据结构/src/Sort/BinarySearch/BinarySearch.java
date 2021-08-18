@@ -41,6 +41,7 @@ public class BinarySearch {
         int mid = 0;
         int index = -1;
         while (left < right) {
+            //防止溢出(l+r溢出),速度快
             mid = left + ((right - left) >> 1);
             if (arr[mid] >= key) {
                 index = mid;
