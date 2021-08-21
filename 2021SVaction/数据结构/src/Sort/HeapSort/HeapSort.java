@@ -1,4 +1,4 @@
-package Sort;
+package Sort.HeapSort;
 
 public class HeapSort {
 
@@ -19,7 +19,6 @@ public class HeapSort {
             heapify(arr, 0, heapSize--);//O(logN)
             swap(arr, 0, heapSize);//O(1)
         }
-
     }
 
     //向上比较
