@@ -13,6 +13,8 @@ public class servlet01 extends HttpServlet {
         String name = req.getParameter("name");
         req.setAttribute("my","Mai");
         System.out.println("servlet01......" + name);
+        req.getServletContext().setAttribute("contextParam","13");
+        System.out.println(req.getServletContext().getAttribute("contextParam"));
         //ctrl+p提示信息
         //内部转发,在web.xml中注册的路径
         req.getRequestDispatcher("/servlet02").forward(req, resp);

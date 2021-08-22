@@ -16,5 +16,6 @@ public class servlet03 extends HttpServlet {
         }
         resp.setContentType("text/html;charset=utf8");
         resp.getWriter().write("<h3>我现在在:" + req.getContextPath() + req.getServletPath() + "</h3>");
+        System.out.println(req.getServletContext().getAttribute("contextParam"));
     }
 }
