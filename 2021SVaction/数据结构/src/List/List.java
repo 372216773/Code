@@ -5,5 +5,5 @@ package List;
 【要求】 如果链表长度为N，时间复杂度要求为O(N)，额外空间复杂度要求为
 O(1)
  */
-public class lianbiao {
+public class List {
 }
