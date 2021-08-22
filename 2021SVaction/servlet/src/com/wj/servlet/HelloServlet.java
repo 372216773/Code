@@ -25,6 +25,9 @@ public class HelloServlet extends HttpServlet {
         System.out.println("会话对象(Session):  " + req.getSession().getId());
         System.out.println("请求方式(getMethod()):  " + req.getMethod());
         System.out.println("请求协议(getProtocol()):  " + req.getProtocol());
+        //获取
+        System.out.println("当前服务器的端口"+req.getLocalPort());
+        System.out.println("远程客户端的地址(主机+端口)"+req.getRemoteHost()+":"+req.getRemotePort());
         //设置读取客户端请求数据的编码
         req.setCharacterEncoding("utf8");
         System.out.println("统一资源定义符(getRequestURL()):  " + req.getRequestURL());
@@ -50,9 +53,9 @@ public class HelloServlet extends HttpServlet {
         //路径信息
         System.out.println("两个路径信息: ");
         //返回具体的servlet的路径
-        System.out.println("getServletPath: " + req.getServletPath());
+        System.out.println("getServletPath(小,具体路径): " + req.getServletPath());
         //返回上下文的路径
-        System.out.println("getContextPath: " + req.getContextPath());
+        System.out.println("getContextPath(大路径): " + req.getContextPath());
 
         //设置响应头信息
         resp.setHeader("header1", "admin");
@@ -84,6 +87,7 @@ public class HelloServlet extends HttpServlet {
         System.out.println("上下文对象:  ");
         ServletContext servletContext = req.getServletContext();
         System.out.println("通过上下文对象获取ContextPath:    " + servletContext.getContextPath());
+        System.out.println("通过req获取ContextPath:    " + req.getContextPath());
         System.out.println("通过上下文对象获取ContextName:   " + servletContext.getServletContextName());
         System.out.println("通过上下文对象获取RealPath:  " + servletContext.getRealPath("/hello"));
 
@@ -114,6 +118,5 @@ public class HelloServlet extends HttpServlet {
     public void init() throws ServletException {
         System.out.println("servlet无参的构造方法(被有参的初始化方法调用)......");
     }
-
 
 }
