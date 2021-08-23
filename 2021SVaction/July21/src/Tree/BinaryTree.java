@@ -112,7 +112,7 @@ public class BinaryTree {
                 stack.push(cur);
                 cur = cur.left;
             }
-            //cur == null,从栈中取出上一级的节点,并打印
+            //cur == null,从栈中取出节点,并打印
             BTNode top = stack.pop();
             System.out.print(top.val + " ");
             //开始遍历右节点
@@ -133,12 +133,13 @@ public class BinaryTree {
             //看一下栈顶元素
             BTNode top = stack.peek();
 
-            //终止条件
+            //终止条件,top的左节点为空,打印top,**top.right == prev**只要打印过的就记为prev,防止在右节点死循环
             if (top.right == null || top.right == prev) {
                 stack.pop();
                 System.out.print(top.val + " ");
                 prev = top;
             } else {
+                //如果右节点不为空,就遍历右子树
                 cur = top.right;
             }
         }

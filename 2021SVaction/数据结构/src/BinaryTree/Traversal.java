@@ -2,6 +2,7 @@ package BinaryTree;
 
 import sun.reflect.generics.tree.Tree;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -91,7 +92,7 @@ public class Traversal {
         if (head == null) return;
         Stack<TreeNode> stack = new Stack<>();
         //head!=null,对应当弹出并输出根节点,stack是为空的,但是二叉树并没有遍历完
-        while (!stack.isEmpty() || head!=null) {
+        while (!stack.isEmpty() || head != null) {
             if (head != null) {
                 stack.push(head);
                 head = head.left;
@@ -103,21 +104,104 @@ public class Traversal {
         }
     }
 
+    //头结点进队列,
+    // 打印栈顶结点
+    //放左节点,放右节点
     public static void w(TreeNode head) {
-        if (head==null) return;
+        if (head == null) return;
         //队列,先进先出
         Queue<TreeNode> list = new LinkedList<>();
         list.add(head);
-        while(!list.isEmpty()) {
+        while (!list.isEmpty()) {
             TreeNode cur = list.poll();
-            System.out.print(cur+" ");
-            if (cur.left!=null) {
+            System.out.print(cur + " ");
+            if (cur.left != null) {
                 list.add(cur.left);
             }
-            if (cur.right!=null) {
+            if (cur.right != null) {
                 list.add(cur.right);
             }
         }
+    }
+
+    //使用hashMap
+    public static int treeMaxWidth(TreeNode head) {
+        if (head == null) return -1;
+        //队列,先进先出
+        Queue<TreeNode> list = new LinkedList<>();
+        HashMap<TreeNode, Integer> map = new HashMap<>();
+        map.put(head, 1);
+        list.add(head);
+        int level = 1;
+        int NodeNum = 1;
+        int max = -1;
+        while (!list.isEmpty()) {
+            TreeNode cur = list.poll();
+
+            //这个节点的level
+            if (level == map.get(cur)) {
+                //当前行数等于map中的行数,属同一行,行中元素个数++
+                NodeNum++;
+            } else {
+                //一行的元素遍历完了,找出个数最多的
+                max = Math.max(max, NodeNum);
+                //行数++;
+                level++;
+                NodeNum = 1;
+            }
+
+            if (cur.left != null) {
+                //当前节点的子节点就是下一层的节点
+                map.put(cur.left, level + 1);
+                //进栈
+                list.add(cur.left);
+            }
+            if (cur.right != null) {
+                map.put(cur.right, level + 1);
+                //进栈
+                list.add(cur.right);
+            }
+        }
+        return max;
+    }
+
+    //不用hashMap
+    public static int treeMaxWidth1(TreeNode head) {
+        if (head == null) return 1;
+        //当前行的最后一个结点
+        TreeNode curEnd = head;
+        //当前节点下一行的最后一个结点
+        TreeNode nextEnd = null;
+        //最大宽度
+        int max = 0;
+        //当前行节点个数
+        int curLevelNode = 0;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(head);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            //当前行个数加一
+            curLevelNode++;
+            if (cur.left != null) {
+                stack.push(cur.left);
+                nextEnd = cur.left;
+            }
+            if (cur.right != null) {
+                stack.push(cur.right);
+                nextEnd = cur.right;
+            }
+
+            //接下来遍历的节点都不会是本行的节点
+            if (cur == curEnd) {
+                //最大值
+                max = Math.max(max, curLevelNode);
+                //个数重置
+                curLevelNode = 0;
+                //下一行变当前行
+                curEnd=nextEnd;
+            }
+        }
+        return max;
     }
 }
 
