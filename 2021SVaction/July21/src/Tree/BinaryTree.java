@@ -292,6 +292,7 @@ public class BinaryTree {
             }
         }
 
+        //当cur等于null时,就是走到了最后一个节点,此队列中就应该只剩下null
         while (!queue.isEmpty()) {
             BTNode cur = queue.poll();
             if (cur != null) {

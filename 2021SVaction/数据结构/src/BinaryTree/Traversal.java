@@ -1,5 +1,6 @@
 package BinaryTree;
 
+import javafx.scene.transform.Scale;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.HashMap;
@@ -51,6 +52,7 @@ public class Traversal {
         Stack<TreeNode> stack = new Stack<>();
         stack.push(head);
         while (!stack.isEmpty()) {
+            //弹出栈顶元素,压入顺序为右左,则出栈顺序为左右
             TreeNode cur = stack.pop();
             System.out.print(cur.val + " ");
             if (cur.right != null) {
@@ -73,7 +75,9 @@ public class Traversal {
         Stack<TreeNode> stack2 = new Stack<>();
         stack1.push(head);
         while (!stack1.isEmpty()) {
+            //弹栈顺序为根,右,左
             TreeNode cur = stack1.pop();
+            //存入的顺序为根,右,左,出栈顺序为左,右,根
             stack2.push(cur);
             if (head.left != null) {
                 stack1.push(head.left);
@@ -88,6 +92,11 @@ public class Traversal {
         }
     }
 
+    /*
+    将左孩子全部入栈
+    弹出栈顶节点,并打印
+    转到右孩子
+     */
     public static void inOrderUnRecur(TreeNode head) {
         if (head == null) return;
         Stack<TreeNode> stack = new Stack<>();
@@ -97,8 +106,9 @@ public class Traversal {
                 stack.push(head);
                 head = head.left;
             } else {
-                TreeNode cur = stack.pop();
-                System.out.println(cur + " ");
+                //左中右
+                head = stack.pop();
+                System.out.println(head + " ");
                 head = head.right;
             }
         }
@@ -203,6 +213,49 @@ public class Traversal {
         }
         return max;
     }
+
+    //如何判断一颗二叉树是否是搜索二叉树？(搜索二叉树:每一颗左子树都比他小,右子树都比他大)
+    public static int preValue = Integer.MIN_VALUE;
+    //递归
+    public static boolean isBSTree(TreeNode head) {
+        if (head==null) return true;
+        boolean isLeftBst = isBSTree(head.left);
+        if (!isLeftBst) return false;
+        if (head.val<=preValue) return false;
+        //到这的值分别为左值,根值,右值
+        preValue = head.val;
+        return isBSTree(head.right);
+    }
+    //非递归
+    public static boolean isBSTreeUnRecur(TreeNode head) {
+        if (head==null) return false;
+        int preValue=Integer.MIN_VALUE;
+        Stack<TreeNode> stack = new Stack<>();
+        while(!stack.isEmpty()||head!=null) {
+            if (head!=null){
+                stack.push(head);
+                head=head.left;
+            }else {
+                head = stack.pop();
+                if (head.val<=preValue) return false;
+                preValue=head.val;
+                head=head.left;
+            }
+        }
+        return true;
+    }
+
+    //如何判断一颗二叉树是完全二叉树？(层序遍历--队列)
+    // (1)只要有任何一个节点有右孩子,但无左孩子,返回false;
+    // (2).在一的条件下,如果遇到第一个左右子节点不全,接下来的节点都会是叶节点
+    LinkedList<Integer> linkedList = new LinkedList<>();
+
+    //如何判断一颗二叉树是否是满二叉树？
+
+    //如何判断一颗二叉树是否是平衡二叉树？（二叉树题目套路）
+
+    //给定两个二叉树的节点node1和node2，找到他们的最低公共祖先节点
+
 }
 
 
