@@ -214,6 +214,7 @@ public class Traversal {
         return max;
     }
 
+    //搜索二叉树
     //如何判断一颗二叉树是否是搜索二叉树？(搜索二叉树:每一颗左子树都比他小,右子树都比他大)
     public static int preValue = Integer.MIN_VALUE;
 
@@ -228,9 +229,57 @@ public class Traversal {
         return isBSTree(head.right);
     }
 
+    //递归1,树形DP(动态规划),递归套路,要求就要相同,信息要全集(所有需要信息的集合)
+    //左树为搜索树,右树为搜索树,左树的max<x,右树的min>x
+    public static boolean isBSTree1(TreeNode head) {
+        return process_isBSTree(head).isBSTree;
+    }
+
+    public static class ReturnType_isBSTree {
+        public boolean isBSTree;
+        public int max;
+        public int min;
+
+        public ReturnType_isBSTree(boolean isBSTree, int max, int min) {
+            this.isBSTree = isBSTree;
+            this.max = max;
+            this.min = min;
+        }
+    }
+
+    private static ReturnType_isBSTree process_isBSTree(TreeNode head) {
+        //max和min值都不好设置,就设置为null,下边调用的时候要做判断
+        if (head == null) return null;
+        //====================================================================
+        //左树的所有信息,会产生null;
+        ReturnType_isBSTree leftTree = process_isBSTree(head.left);
+        //右树的所有信息
+        ReturnType_isBSTree rightTree = process_isBSTree(head.right);
+        //====================================================================
+        //自己的所有信息
+        int max = head.val;
+        int min = head.val;
+        //排除掉空的情况
+        if (leftTree != null) {
+            max = Math.max(leftTree.max, max);
+            min = Math.min(leftTree.min, min);
+        }
+        if (rightTree != null) {
+            max = Math.max(rightTree.max, max);
+            min = Math.max(rightTree.min, min);
+        }
+        Boolean isBSTree = true;
+        //不满足搜索二叉树的条件,isBSTree设置为false;子树为null满足要求
+        if (leftTree != null && (!leftTree.isBSTree || leftTree.max >= head.val)) isBSTree = false;
+        if (rightTree != null && (!rightTree.isBSTree || rightTree.min <= head.val)) isBSTree = false;
+        //====================================================================
+        return new ReturnType_isBSTree(isBSTree, max, min);
+    }
+
     //非递归
     public static boolean isBSTreeUnRecur(TreeNode head) {
         if (head == null) return false;
+        //做为比较值存在
         int preValue = Integer.MIN_VALUE;
         Stack<TreeNode> stack = new Stack<>();
         while (!stack.isEmpty() || head != null) {
@@ -246,6 +295,7 @@ public class Traversal {
         }
         return true;
     }
+
 
     //如何判断一颗二叉树是完全二叉树？(层序遍历--队列)
     /*(一)
@@ -274,7 +324,6 @@ public class Traversal {
         return true;
     }
 
-    //
     public static boolean isCompleteTree1(TreeNode head) {
         if (head == null) return true;
         LinkedList<TreeNode> list = new LinkedList<>();
@@ -294,13 +343,75 @@ public class Traversal {
         return true;
     }
 
-
     //如何判断一颗二叉树是否是满二叉树？
+    //1.l:最大深度;n:节点个数 满足(n=2^l-1),就是满二叉树,所以需要两个值l和n
+    public static boolean isFullTree(TreeNode head) {
+        if (head == null) return true;
+        ReturnType_isFullTree data = process_isFullTree(head);
+        return 1 << data.height == data.nodeNum;
+    }
+
+    public static class ReturnType_isFullTree {
+        public int height;
+        public int nodeNum;
+
+        public ReturnType_isFullTree(int height, int nodeNum) {
+            this.height = height;
+            this.nodeNum = nodeNum;
+        }
+    }
+
+    public static ReturnType_isFullTree process_isFullTree(TreeNode head) {
+        if (head == null) return new ReturnType_isFullTree(0, 0);
+
+        ReturnType_isFullTree leftTree = process_isFullTree(head.left);
+        ReturnType_isFullTree rightTree = process_isFullTree(head.right);
+
+        //自己的所有信息
+        int height = Math.max(leftTree.height, rightTree.height) + 1;
+        int nodeNum = leftTree.nodeNum + rightTree.nodeNum;
+
+        return new ReturnType_isFullTree(height, nodeNum);
+    }
 
     //如何判断一颗二叉树是否是平衡二叉树？（二叉树题目套路）
+    //左树高度与右树高度差不超过1--> |左树高度 - 右树高度| <= 1
+    public static boolean isBalanced(TreeNode head) {
+        return process_isBalanced(head).isBalanced;
+    }
+
+    //自定义类型,返回需要的所有值
+    public static class ReturnType_isBalanced {
+        public boolean isBalanced;
+        public int height;
+
+        public ReturnType_isBalanced(boolean isBalanced, int height) {
+            this.isBalanced = isBalanced;
+            this.height = height;
+        }
+    }
+
+    public static ReturnType_isBalanced process_isBalanced(TreeNode head) {
+        if (head == null) return new ReturnType_isBalanced(true, 0);
+
+
+        ReturnType_isBalanced leftTree = process_isBalanced(head.left);
+        ReturnType_isBalanced rightTree = process_isBalanced(head.right);
+
+
+        //根节点树的高度为左子树和右子树的高度的最大值加一
+        int height = Math.max(leftTree.height, rightTree.height) + 1;
+        //判断是否为搜索树,1.左子树和右子树都是搜索树,左子树和右子树高度差<=1
+        boolean isBalanced = (leftTree.isBalanced && rightTree.isBalanced)
+                && Math.abs(leftTree.height - rightTree.height) < 2;
+        //返回这个数的所有信息
+        return new ReturnType_isBalanced(isBalanced, height);
+    }
 
     //给定两个二叉树的节点node1和node2，找到他们的最低公共祖先节点
 
 }
 
-
+/*
+可以通过向左树,右树要信息就解决,就可以用DP套路
+ */
