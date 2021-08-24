@@ -12,5 +12,6 @@ public class servlet04 extends HttpServlet {
         resp.setContentType("text/html;charset=utf8");
         resp.getWriter().write("<h3>我现在到:" + req.getContextPath() + req.getServletPath() + "了"+"</h3>");
         System.out.println("我现在在servlet4中做事情......");
+        req.setAttribute("id","123");
     }
 }
