@@ -303,4 +303,37 @@ public class BinaryTree {
 
     }
 
+    //如何判断一颗二叉树是否是搜索二叉树？(搜索二叉树:每一颗左子树都比他小,右子树都比他大)
+    public static int preValue = Integer.MIN_VALUE;
+    //递归
+    public static boolean isBSTree(BTNode head) {
+        if (head == null) return true;
+        boolean isLeftBst = isBSTree(head.left);
+        if (!isLeftBst) return false;
+        if (head.val <= preValue) return false;
+        //到这的值分别为左值,根值,右值
+        preValue = head.val;
+        return isBSTree(head.right);
+    }
+    //非递归
+    public static boolean isBSTreeUnRecur(BTNode head) {
+        if (head == null) return false;
+        int preValue = Integer.MIN_VALUE;
+        Stack<BTNode> stack = new Stack<>();
+        while (!stack.isEmpty() || head != null) {
+            if (head != null) {
+                stack.push(head);
+                head = head.left;
+            } else {
+                head = stack.pop();
+                if (head.val <= preValue) return false;
+                preValue = head.val;
+                head = head.left;
+            }
+        }
+        return true;
+    }
+
+
+
 }

@@ -208,7 +208,7 @@ public class Traversal {
                 //个数重置
                 curLevelNode = 0;
                 //下一行变当前行
-                curEnd=nextEnd;
+                curEnd = nextEnd;
             }
         }
         return max;
@@ -216,39 +216,84 @@ public class Traversal {
 
     //如何判断一颗二叉树是否是搜索二叉树？(搜索二叉树:每一颗左子树都比他小,右子树都比他大)
     public static int preValue = Integer.MIN_VALUE;
+
     //递归
     public static boolean isBSTree(TreeNode head) {
-        if (head==null) return true;
+        if (head == null) return true;
         boolean isLeftBst = isBSTree(head.left);
         if (!isLeftBst) return false;
-        if (head.val<=preValue) return false;
+        if (head.val <= preValue) return false;
         //到这的值分别为左值,根值,右值
         preValue = head.val;
         return isBSTree(head.right);
     }
+
     //非递归
     public static boolean isBSTreeUnRecur(TreeNode head) {
-        if (head==null) return false;
-        int preValue=Integer.MIN_VALUE;
+        if (head == null) return false;
+        int preValue = Integer.MIN_VALUE;
         Stack<TreeNode> stack = new Stack<>();
-        while(!stack.isEmpty()||head!=null) {
-            if (head!=null){
+        while (!stack.isEmpty() || head != null) {
+            if (head != null) {
                 stack.push(head);
-                head=head.left;
-            }else {
+                head = head.left;
+            } else {
                 head = stack.pop();
-                if (head.val<=preValue) return false;
-                preValue=head.val;
-                head=head.left;
+                if (head.val <= preValue) return false;
+                preValue = head.val;
+                head = head.left;
             }
         }
         return true;
     }
 
     //如何判断一颗二叉树是完全二叉树？(层序遍历--队列)
-    // (1)只要有任何一个节点有右孩子,但无左孩子,返回false;
-    // (2).在一的条件下,如果遇到第一个左右子节点不全,接下来的节点都会是叶节点
-    LinkedList<Integer> linkedList = new LinkedList<>();
+    /*(一)
+    (1).只要有任何一个节点有右孩子,但无左孩子,返回false;
+    (2).在一的条件下,如果遇到第一个左右子节点不全,接下来的节点都会是叶节点
+    */
+    public static boolean isCompleteTree(TreeNode head) {
+        boolean flag = false;
+        LinkedList<TreeNode> list = new LinkedList<>();
+        list.add(head);
+        while (!list.isEmpty()) {
+            head = list.poll();
+            //有节点标记为flag,则后边的节点都为叶节点
+            if (flag && (head.left != null || head.right != null) || (head.left == null && head.right != null))
+                return false;
+            //有节点标记为flag,则后边的节点都为叶节点
+            if (head.left != null) {
+                list.add(head.left);
+            }
+            if (head.right != null) {
+                list.add(head.right);
+            } else {
+                flag = true;
+            }
+        }
+        return true;
+    }
+
+    //
+    public static boolean isCompleteTree1(TreeNode head) {
+        if (head == null) return true;
+        LinkedList<TreeNode> list = new LinkedList<>();
+        list.add(head);
+        TreeNode cur = head;
+        while (cur != null) {
+            cur = list.poll();
+            if (cur != null) {
+                list.add(cur.left);
+                list.add(cur.right);
+            }
+        }
+        //此实战中应该全是null
+        for (TreeNode node : list) {
+            if (node != null) return false;
+        }
+        return true;
+    }
+
 
     //如何判断一颗二叉树是否是满二叉树？
 
