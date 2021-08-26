@@ -3,10 +3,7 @@ package BinaryTree;
 import javafx.scene.transform.Scale;
 import sun.reflect.generics.tree.Tree;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 class TreeNode {
     int val;
@@ -118,20 +115,6 @@ public class Traversal {
     // 打印栈顶结点
     //放左节点,放右节点
     public static void w(TreeNode head) {
-        if (head == null) return;
-        //队列,先进先出
-        Queue<TreeNode> list = new LinkedList<>();
-        list.add(head);
-        while (!list.isEmpty()) {
-            TreeNode cur = list.poll();
-            System.out.print(cur + " ");
-            if (cur.left != null) {
-                list.add(cur.left);
-            }
-            if (cur.right != null) {
-                list.add(cur.right);
-            }
-        }
     }
 
     //使用hashMap
@@ -147,7 +130,6 @@ public class Traversal {
         int max = -1;
         while (!list.isEmpty()) {
             TreeNode cur = list.poll();
-
             //这个节点的level
             if (level == map.get(cur)) {
                 //当前行数等于map中的行数,属同一行,行中元素个数++
@@ -170,6 +152,38 @@ public class Traversal {
                 map.put(cur.right, level + 1);
                 //进栈
                 list.add(cur.right);
+            }
+        }
+        return max;
+    }
+
+    public int widthOfBinaryTree(TreeNode root) {
+        if(root==null) return 0;
+        //<节点,下标索引>
+        HashMap<TreeNode, Integer> hashMap = new HashMap<>();
+        hashMap.put(root,1);
+        //遍历这棵树
+        Queue<TreeNode> stack = new LinkedList<>();
+        stack.add(root);
+        int size=0;
+        int max =0;
+        int end=1;
+        while(!stack.isEmpty()) {
+            size = stack.size();
+            int start = hashMap.get(stack.peek());
+            max = Math.max((end-start+1),max);
+            while(size-- >0){
+                TreeNode cur = stack.poll();
+                if (cur.left != null) {
+                    hashMap.put(cur.left, hashMap.get(cur) * 2);
+                    stack.add(cur.left);
+                    end = hashMap.get(cur.left);
+                }
+                if (cur.right != null) {
+                    hashMap.put(cur.right, hashMap.get(cur) * 2 + 1);
+                    stack.add(cur.right);
+                    end = hashMap.get(cur.right);
+                }
             }
         }
         return max;
@@ -211,6 +225,7 @@ public class Traversal {
                 curEnd = nextEnd;
             }
         }
+        max = Math.max(max, curLevelNode);
         return max;
     }
 
@@ -295,7 +310,6 @@ public class Traversal {
         }
         return true;
     }
-
 
     //如何判断一颗二叉树是完全二叉树？(层序遍历--队列)
     /*(一)
@@ -409,6 +423,10 @@ public class Traversal {
     }
 
     //给定两个二叉树的节点node1和node2，找到他们的最低公共祖先节点
+    public static TreeNode method(TreeNode head, TreeNode o1, TreeNode o2) {
+
+        return null;
+    }
 
 }
 
