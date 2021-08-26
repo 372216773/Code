@@ -44,7 +44,7 @@ public class singleResponsibility {
 
         //加载文件
         String file = loadFile("D:\\files\\create01.txt");
-        String file1 = loadFile("D:\\files\\create01.txt");
+        String file1 = loadFile("D:\\files\\create02.txt");
 
         //得到单词
         String[] words = getWords(file);
@@ -54,7 +54,7 @@ public class singleResponsibility {
         String[] sameElement = getSameElement(words, words1);
 
         //2.找出相同单词
-        findSameWords(file,file1);
+        findSameWords(file, file1);
 
     }
 }
