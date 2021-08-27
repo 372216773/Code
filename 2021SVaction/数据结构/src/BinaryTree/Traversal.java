@@ -17,6 +17,7 @@ class TreeNode {
 
 public class Traversal {
 
+
     //3,5,1,6,2,0,8,null,null,7,4
     public TreeNode createTree() {
         TreeNode A = new TreeNode(3);
@@ -37,6 +38,17 @@ public class Traversal {
         C.right = G;
         E.right = H;
         E.right = I;
+        return A;
+    }
+
+    public static TreeNode createTree1() {
+
+        TreeNode A = new TreeNode(2);
+        TreeNode B = new TreeNode(1);
+        TreeNode C = new TreeNode(3);
+
+        A.left = B;
+        A.right = C;
         return A;
     }
 
@@ -458,13 +470,13 @@ public class Traversal {
         }
         hashSet.add(root);
 
-        for (TreeNode node: hashSet) {
-            System.out.print(node.val+ " ");
+        for (TreeNode node : hashSet) {
+            System.out.print(node.val + " ");
         }
         System.out.println();
         //3.遍历o2整条链,如果发现其中一个节点存在于hashSet中,就返回这个节点
         cur = q;
-        while (cur!=fatherMap.get(cur)) {
+        while (cur != fatherMap.get(cur)) {
             if (hashSet.contains(cur)) {
                 return cur;
             }
@@ -472,6 +484,7 @@ public class Traversal {
         }
         return root;
     }
+
     public static void process(TreeNode root, HashMap<TreeNode, TreeNode> fatherMap) {
         if (root == null) return;
         //根是根的左孩子和右孩子的父节点
@@ -485,9 +498,115 @@ public class Traversal {
         process(root.right, fatherMap);
     }
 
-    //最低公共祖先
+    /*
+    p,q两种情况:
+    1).各在一侧,返回head
+    2).都在一侧,只要遇到其中一个,就返回,就是他们的最近祖先节点
+     */
+    public static TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == q || root == p) {
+            return root;
+        }
+        TreeNode leftTree = lowestCommonAncestor1(root.left, p, q);
+        TreeNode rightTree = lowestCommonAncestor1(root.right, p, q);
 
+        //1).各在一侧,返回head
+        if (leftTree != null && rightTree != null) {
+            return root;
+        }
+        //2).都在一侧,只要遇到其中一个,就返回,就是他们的最近祖先节点
+        return leftTree != null ? leftTree : rightTree;
+    }
 
+    /*
+    现在有一种新的二叉树节点类型如下:
+public class Node {
+public int value;
+public Node left;
+public Node right;
+public Node parent;
+public Node(int val) {
+value = val;
+}
+}
+该结构比普通二叉树节点结构多了一个指向父节点的parent指针。
+假设有一棵Node类型的节点组成的二叉树，树中每个节点的parent指针都正确地指向自己的父节点，头节
+点的parent指向null。
+只给一个在二叉树中的某个节点node，请实现返回node的后继节点的函数。
+在二叉树的中序遍历的序列中， node的下一个节点叫作node的后继节点。
+     */
+    /*
+    1.x有右树的时候,x的后继节点为右树的最左节点
+    2.x无右树的时候,
+     */
+
+    public class Node {
+        public int value;
+        public Node left;
+        public Node right;
+        public Node parent;
+
+        public Node(int val) {
+            value = val;
+        }
+    }
+
+    public static Node inorderSuccessor1(Node node) {
+        if (node == null) return null;
+        if (node.right != null) {
+            return process_inorder(node.right);
+        } else {
+            Node parent = node.parent;
+            //循环的条件是这个节点不是父节点的左节点
+            while (parent != null && parent.left != node) {
+                node = parent;
+                parent = node.parent;
+            }
+            return parent;
+        }
+    }
+
+    public static Node process_inorder(Node node) {
+        if (node == null) return null;
+        while (node.left != null) {
+            node = node.left;
+        }
+        return node;
+    }
+
+    //序列化
+    public static String serialByPre(TreeNode root) {
+        if (root==null) return "#_";
+
+        String string = root.val+"_";
+        string += serialByPre(root.left);
+        string += serialByPre(root.right);
+        return string;
+    }
+
+    //反序列化
+    public static TreeNode reconByPreString(String string) {
+        String[] str = string.split("_");
+        Queue<String> list = new LinkedList<>();
+        for (int i = 0; i < str.length; i++) {
+            list.add(str[i]);
+        }
+        TreeNode head = process_recon(list);
+        return head;
+    }
+    private static TreeNode process_recon(Queue<String> list) {
+        String value = list.poll();
+        if (value.equals("#")) {
+            return null;
+        }
+        TreeNode node = new TreeNode(Integer.parseInt(value));
+        node.left = process_recon(list);
+        node.right = process_recon(list);
+
+        return node;
+    }
+
+    //折纸问题
 }
 
 /*
