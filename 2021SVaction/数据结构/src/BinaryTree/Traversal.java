@@ -17,15 +17,17 @@ class TreeNode {
 
 public class Traversal {
 
+    //3,5,1,6,2,0,8,null,null,7,4
     public TreeNode createTree() {
-        TreeNode A = new TreeNode(1);
-        TreeNode B = new TreeNode(2);
-        TreeNode C = new TreeNode(3);
-        TreeNode D = new TreeNode(4);
-        TreeNode E = new TreeNode(5);
-        TreeNode F = new TreeNode(6);
-        TreeNode G = new TreeNode(7);
-        TreeNode H = new TreeNode(8);
+        TreeNode A = new TreeNode(3);
+        TreeNode B = new TreeNode(5);
+        TreeNode C = new TreeNode(1);
+        TreeNode D = new TreeNode(6);
+        TreeNode E = new TreeNode(2);
+        TreeNode F = new TreeNode(0);
+        TreeNode G = new TreeNode(8);
+        TreeNode H = new TreeNode(7);
+        TreeNode I = new TreeNode(4);
 
         A.left = B;
         A.right = C;
@@ -34,6 +36,7 @@ public class Traversal {
         C.left = F;
         C.right = G;
         E.right = H;
+        E.right = I;
         return A;
     }
 
@@ -44,9 +47,6 @@ public class Traversal {
         preOrderRecur(head.right);
     }
 
-    public static void preOrderRecur1(TreeNode root) {
-        if()
-    }
 
     public static void inOrderRecur(TreeNode head) {
         if (head == null) return;
@@ -177,22 +177,23 @@ public class Traversal {
         }
         return max;
     }
+
     public int widthOfBinaryTree(TreeNode root) {
-        if(root==null) return 0;
+        if (root == null) return 0;
         //<节点,下标索引>
         HashMap<TreeNode, Integer> hashMap = new HashMap<>();
-        hashMap.put(root,1);
+        hashMap.put(root, 1);
         //遍历这棵树
         Queue<TreeNode> stack = new LinkedList<>();
         stack.add(root);
-        int size=0;
-        int max =0;
-        int end=1;
-        while(!stack.isEmpty()) {
+        int size = 0;
+        int max = 0;
+        int end = 1;
+        while (!stack.isEmpty()) {
             size = stack.size();
             int start = hashMap.get(stack.peek());
-            max = Math.max((end-start+1),max);
-            while(size-- >0){
+            max = Math.max((end - start + 1), max);
+            while (size-- > 0) {
                 TreeNode cur = stack.poll();
                 if (cur.left != null) {
                     hashMap.put(cur.left, hashMap.get(cur) * 2);
@@ -208,6 +209,7 @@ public class Traversal {
         }
         return max;
     }
+
     //不用hashMap
     public static int treeMaxWidth1(TreeNode head) {
         if (head == null) return 1;
@@ -268,6 +270,7 @@ public class Traversal {
     public static boolean isBSTree1(TreeNode head) {
         return process_isBSTree(head).isBSTree;
     }
+
     public static class ReturnType_isBSTree {
         public boolean isBSTree;
         public int max;
@@ -279,6 +282,7 @@ public class Traversal {
             this.min = min;
         }
     }
+
     private static ReturnType_isBSTree process_isBSTree(TreeNode head) {
         //max和min值都不好设置,就设置为null,下边调用的时候要做判断
         if (head == null) return null;
@@ -353,6 +357,7 @@ public class Traversal {
         }
         return true;
     }
+
     public static boolean isCompleteTree1(TreeNode head) {
         if (head == null) return true;
         LinkedList<TreeNode> list = new LinkedList<>();
@@ -379,6 +384,7 @@ public class Traversal {
         ReturnType_isFullTree data = process_isFullTree(head);
         return 1 << data.height == data.nodeNum;
     }
+
     public static class ReturnType_isFullTree {
         public int height;
         public int nodeNum;
@@ -388,6 +394,7 @@ public class Traversal {
             this.nodeNum = nodeNum;
         }
     }
+
     public static ReturnType_isFullTree process_isFullTree(TreeNode head) {
         if (head == null) return new ReturnType_isFullTree(0, 0);
 
@@ -406,6 +413,7 @@ public class Traversal {
     public static boolean isBalanced(TreeNode head) {
         return process_isBalanced(head).isBalanced;
     }
+
     public static class ReturnType_isBalanced {
         public boolean isBalanced;
         public int height;
@@ -415,6 +423,7 @@ public class Traversal {
             this.height = height;
         }
     }
+
     public static ReturnType_isBalanced process_isBalanced(TreeNode head) {
         if (head == null) return new ReturnType_isBalanced(true, 0);
 
@@ -433,10 +442,51 @@ public class Traversal {
     }
 
     //给定两个二叉树的节点node1和node2，找到他们的最低公共祖先节点
-    public static TreeNode method(TreeNode head, TreeNode o1, TreeNode o2) {
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        //1.拿到所有节点所定义的父节点,要找到一个节点的整条链,就可以这样做
+        HashMap<TreeNode, TreeNode> fatherMap = new HashMap<>();
+        fatherMap.put(root, root);
+        process(root, fatherMap);
 
-        return null;
+        //2.通过o1一直往上遍历,将o1的整条链存放到hashSet中
+        HashSet<TreeNode> hashSet = new HashSet<>();
+        TreeNode cur = p;
+        while (cur != fatherMap.get(cur)) {
+            hashSet.add(cur);
+            //遍历的依据
+            cur = fatherMap.get(cur);
+        }
+        hashSet.add(root);
+
+        for (TreeNode node: hashSet) {
+            System.out.print(node.val+ " ");
+        }
+        System.out.println();
+        //3.遍历o2整条链,如果发现其中一个节点存在于hashSet中,就返回这个节点
+        cur = q;
+        while (cur!=fatherMap.get(cur)) {
+            if (hashSet.contains(cur)) {
+                return cur;
+            }
+            cur = fatherMap.get(cur);
+        }
+        return root;
     }
+    public static void process(TreeNode root, HashMap<TreeNode, TreeNode> fatherMap) {
+        if (root == null) return;
+        //根是根的左孩子和右孩子的父节点
+        if (root.left != null) {
+            fatherMap.put(root.left, root);
+        }
+        if (root.right != null) {
+            fatherMap.put(root.right, root);
+        }
+        process(root.left, fatherMap);
+        process(root.right, fatherMap);
+    }
+
+    //最低公共祖先
+
 
 }
 
