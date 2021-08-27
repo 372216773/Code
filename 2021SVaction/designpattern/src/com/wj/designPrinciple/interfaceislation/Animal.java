@@ -1,4 +1,4 @@
-package com.wj.interfaceislation;
+package com.wj.designPrinciple.interfaceislation;
 
 public interface Animal {
    //并不是所有的动物都会游泳,飞,如果定义一个Dog类让其去实现这个Animal接口,就必须要实现fly()这个方法,显然不合适

@@ -1,4 +1,4 @@
-package com.wj.dependencyreverse;
+package com.wj.designPrinciple.dependencyreverse;
 
 
 //-----作者添加一个接口---------

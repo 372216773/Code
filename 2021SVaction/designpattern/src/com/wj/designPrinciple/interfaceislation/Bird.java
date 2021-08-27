@@ -1,4 +1,4 @@
-package com.wj.interfaceislation;
+package com.wj.designPrinciple.interfaceislation;
 
 public class Bird implements Animal,swimming{
     @Override

@@ -1,4 +1,4 @@
-package com.wj.singleresponsibility;
+package com.wj.designPrinciple.singleresponsibility;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -38,6 +38,39 @@ public class singleResponsibility {
     public static String[] getWords(String string) {
         //正则表达式[^a-zA-Z]非字母当作分隔符;[^a-zA-Z]+连续的非字母当分隔符
         return string.split("[^a-zA-Z]+");
+    }
+
+    //找到两个文件中相同单词
+    public static void findSameWords(String path1, String path2) {
+        String file = loadFile(path1);
+        String file1 = loadFile(path2);
+
+        String[] words = getWords(file);
+        String[] words1 = getWords(file1);
+
+        String[] sameElements = getSameElement(words, words1);
+        for (String str : sameElements) {
+            System.out.println(str);
+        }
+    }
+
+    public static String[] getSameElement(String[] words, String[] words1) {
+
+        //List<String> list = Arrays.asList(words);此时得到的list是不能那个修改值的
+        List<String> list = new ArrayList<>(Arrays.asList(words));
+        List<String> list1 = new ArrayList<>(Arrays.asList(words1));
+        /*for (String word : words) {
+            for (String s : words1) {
+                if (word.equals(s)) {
+                    hashSet.add(word);
+                }
+            }
+        }*/
+        //计算交集,结果存放到list中,list2不变
+        list.retainAll(list1);
+        HashSet<String> hashSet = new HashSet<>(list);
+        //集合变成数组时,转成参数的类型
+        return hashSet.toArray(new String[0]);
     }
 
     public static void main(String[] args) {

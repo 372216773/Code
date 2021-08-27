@@ -1,4 +1,4 @@
-package com.wj.openclose;
+package com.wj.designPrinciple.openclose;
 
 public class App {
     public static void main(String[] args) {

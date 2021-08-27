@@ -1,4 +1,4 @@
-package com.wj.openclose;
+package com.wj.designPrinciple.openclose;
 //这是源代码,不能修改,否则会违反开闭原则
 public class Car {
     private String band;

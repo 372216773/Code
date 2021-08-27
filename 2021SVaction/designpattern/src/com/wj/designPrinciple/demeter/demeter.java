@@ -1,4 +1,4 @@
-package com.wj.demeter;
+package com.wj.designPrinciple.demeter;
 
 class Computer {
     private void save() {

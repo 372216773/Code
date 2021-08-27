@@ -17,11 +17,35 @@ class TreeNode {
 
 public class Traversal {
 
+    public TreeNode createTree() {
+        TreeNode A = new TreeNode(1);
+        TreeNode B = new TreeNode(2);
+        TreeNode C = new TreeNode(3);
+        TreeNode D = new TreeNode(4);
+        TreeNode E = new TreeNode(5);
+        TreeNode F = new TreeNode(6);
+        TreeNode G = new TreeNode(7);
+        TreeNode H = new TreeNode(8);
+
+        A.left = B;
+        A.right = C;
+        B.left = D;
+        B.right = E;
+        C.left = F;
+        C.right = G;
+        E.right = H;
+        return A;
+    }
+
     public static void preOrderRecur(TreeNode head) {
         if (head == null) return;
         System.out.print(head.val + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
+    }
+
+    public static void preOrderRecur1(TreeNode root) {
+        if()
     }
 
     public static void inOrderRecur(TreeNode head) {
@@ -38,7 +62,8 @@ public class Traversal {
         System.out.println(head.val + " ");
     }
 
-    //非递归遍历二叉树通过栈实现
+    //非递归遍历二叉树通过栈实现----------------------------------------
+
     /*
     从栈中弹出一个节点cur
     打印cur
@@ -111,11 +136,7 @@ public class Traversal {
         }
     }
 
-    //头结点进队列,
-    // 打印栈顶结点
-    //放左节点,放右节点
-    public static void w(TreeNode head) {
-    }
+    //-----------------------------------------------------------
 
     //使用hashMap
     public static int treeMaxWidth(TreeNode head) {
@@ -156,7 +177,6 @@ public class Traversal {
         }
         return max;
     }
-
     public int widthOfBinaryTree(TreeNode root) {
         if(root==null) return 0;
         //<节点,下标索引>
@@ -188,7 +208,6 @@ public class Traversal {
         }
         return max;
     }
-
     //不用hashMap
     public static int treeMaxWidth1(TreeNode head) {
         if (head == null) return 1;
@@ -249,7 +268,6 @@ public class Traversal {
     public static boolean isBSTree1(TreeNode head) {
         return process_isBSTree(head).isBSTree;
     }
-
     public static class ReturnType_isBSTree {
         public boolean isBSTree;
         public int max;
@@ -261,7 +279,6 @@ public class Traversal {
             this.min = min;
         }
     }
-
     private static ReturnType_isBSTree process_isBSTree(TreeNode head) {
         //max和min值都不好设置,就设置为null,下边调用的时候要做判断
         if (head == null) return null;
@@ -291,7 +308,6 @@ public class Traversal {
         return new ReturnType_isBSTree(isBSTree, max, min);
     }
 
-    //非递归
     public static boolean isBSTreeUnRecur(TreeNode head) {
         if (head == null) return false;
         //做为比较值存在
@@ -337,7 +353,6 @@ public class Traversal {
         }
         return true;
     }
-
     public static boolean isCompleteTree1(TreeNode head) {
         if (head == null) return true;
         LinkedList<TreeNode> list = new LinkedList<>();
@@ -364,7 +379,6 @@ public class Traversal {
         ReturnType_isFullTree data = process_isFullTree(head);
         return 1 << data.height == data.nodeNum;
     }
-
     public static class ReturnType_isFullTree {
         public int height;
         public int nodeNum;
@@ -374,7 +388,6 @@ public class Traversal {
             this.nodeNum = nodeNum;
         }
     }
-
     public static ReturnType_isFullTree process_isFullTree(TreeNode head) {
         if (head == null) return new ReturnType_isFullTree(0, 0);
 
@@ -393,8 +406,6 @@ public class Traversal {
     public static boolean isBalanced(TreeNode head) {
         return process_isBalanced(head).isBalanced;
     }
-
-    //自定义类型,返回需要的所有值
     public static class ReturnType_isBalanced {
         public boolean isBalanced;
         public int height;
@@ -404,7 +415,6 @@ public class Traversal {
             this.height = height;
         }
     }
-
     public static ReturnType_isBalanced process_isBalanced(TreeNode head) {
         if (head == null) return new ReturnType_isBalanced(true, 0);
 
