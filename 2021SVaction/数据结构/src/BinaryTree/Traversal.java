@@ -606,7 +606,19 @@ value = val;
         return node;
     }
 
-    //折纸问题
+    //折纸问题,就是中序遍历,每一颗左子树为凹,每一颗右子树为凸
+    public static void printAllFolds(int N) {
+        PaperFolding(1,N,true);
+    }
+    //i:节点的层数,N:层数,down--true 凹,down--false 凸
+    public static void PaperFolding(int i, int n, boolean down) {
+        if (i<n) return;
+        //左节点都为凹
+        PaperFolding(i+1,n,true);
+        System.out.println(down?"凹":"凸");
+        //右节点都为凸
+        PaperFolding(i+1,n,false);
+    }
 }
 
 /*
