@@ -32,7 +32,7 @@ class ColdRiceNoodlesFactory implements FoodFactory {
     }
 }
 
-class RiceNoodlesFactory implements FoodFactory {
+    class RiceNoodlesFactory implements FoodFactory {
 
     @Override
     public Food getFood() {
