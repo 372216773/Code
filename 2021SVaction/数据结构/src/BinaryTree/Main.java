@@ -1,9 +1,14 @@
 package BinaryTree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Traversal traversal = new Traversal();
-        TreeNode node = traversal.createTree();
-        System.out.println(Traversal.serialByPre(node));
+        TreeNode tree = traversal.createTree();
+        Traversal.posOrderUnRecur(tree);
+
     }
 }

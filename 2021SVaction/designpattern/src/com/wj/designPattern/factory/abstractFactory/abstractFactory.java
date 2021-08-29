@@ -1,4 +1,4 @@
-package com.wj.factory.abstractFactory;
+package com.wj.designPattern.factory.abstractFactory;
 
 interface Food {
     void eat();

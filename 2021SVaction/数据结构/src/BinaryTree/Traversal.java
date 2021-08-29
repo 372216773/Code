@@ -1,6 +1,7 @@
 package BinaryTree;
 
 import javafx.scene.transform.Scale;
+import jdk.nashorn.internal.ir.TernaryNode;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
@@ -36,7 +37,7 @@ public class Traversal {
         B.right = E;
         C.left = F;
         C.right = G;
-        E.right = H;
+        E.left = H;
         E.right = I;
         return A;
     }
@@ -54,17 +55,39 @@ public class Traversal {
 
     public static void preOrderRecur(TreeNode head) {
         if (head == null) return;
+
         System.out.print(head.val + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
     }
 
+    //所有树都满足中左右
+    public static void preOrderRecur1(TreeNode root) {
+        if (root == null) return;
+
+        //先打印
+        System.out.print(root.val + " ");
+        //遍历左树
+        preOrderRecur1(root.left);
+        //遍历右树
+        preOrderRecur1(root.right);
+    }
 
     public static void inOrderRecur(TreeNode head) {
         if (head == null) return;
+
         inOrderRecur(head.left);
-        System.out.println(head.val + " ");
+        System.out.print(head.val + " ");
         inOrderRecur(head.right);
+    }
+
+    //所有树都满足左中右
+    public static void inOrderRecur1(TreeNode root) {
+        if (root == null) return;
+
+        inOrderRecur1(root.left);
+        System.out.print(root.val + " ");
+        inOrderRecur1(root.right);
     }
 
     public static void posOrderRecur(TreeNode head) {
@@ -73,6 +96,16 @@ public class Traversal {
         posOrderRecur(head.right);
         System.out.println(head.val + " ");
     }
+
+    //所有树都满足左右中
+    public static void posOrderRecur1(TreeNode root) {
+        if (root == null) return;
+
+        posOrderRecur1(root.left);
+        posOrderRecur1(root.right);
+        System.out.print(root.val + " ");
+    }
+
 
     //非递归遍历二叉树通过栈实现----------------------------------------
 
@@ -87,6 +120,22 @@ public class Traversal {
         stack.push(head);
         while (!stack.isEmpty()) {
             //弹出栈顶元素,压入顺序为右左,则出栈顺序为左右
+            TreeNode cur = stack.pop();
+            System.out.print(cur.val + " ");
+            if (cur.right != null) {
+                stack.push(cur.right);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+        }
+    }
+    public static void preOrderUnRecur1(TreeNode root) {
+        if (root == null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        //左右,出栈右左,.......
+        while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
             System.out.print(cur.val + " ");
             if (cur.right != null) {
@@ -113,11 +162,11 @@ public class Traversal {
             TreeNode cur = stack1.pop();
             //存入的顺序为根,右,左,出栈顺序为左,右,根
             stack2.push(cur);
-            if (head.left != null) {
-                stack1.push(head.left);
+            if (cur.left != null) {
+                stack1.push(cur.left);
             }
-            if (head.right != null) {
-                stack1.push(head.right);
+            if (cur.right != null) {
+                stack1.push(cur.right);
             }
         }
         while (!stack2.isEmpty()) {
@@ -125,6 +174,27 @@ public class Traversal {
             System.out.print(cur.val + " ");
         }
     }
+    public static void posOrderUnRecur1(TreeNode root) {
+        if (root==null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> stack1 = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            stack1.push(cur);
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+            if (cur.right != null) {
+                stack.push(cur.right);
+            }
+        }
+        while (!stack1.isEmpty()) {
+            TreeNode cur = stack1.pop();
+            System.out.print(cur.val + " ");
+        }
+    }
+
 
     /*
     将左孩子全部入栈
@@ -576,9 +646,9 @@ value = val;
 
     //序列化
     public static String serialByPre(TreeNode root) {
-        if (root==null) return "#_";
+        if (root == null) return "#_";
 
-        String string = root.val+"_";
+        String string = root.val + "_";
         string += serialByPre(root.left);
         string += serialByPre(root.right);
         return string;
@@ -594,6 +664,7 @@ value = val;
         TreeNode head = process_recon(list);
         return head;
     }
+
     private static TreeNode process_recon(Queue<String> list) {
         String value = list.poll();
         if (value.equals("#")) {
@@ -608,16 +679,17 @@ value = val;
 
     //折纸问题,就是中序遍历,每一颗左子树为凹,每一颗右子树为凸
     public static void printAllFolds(int N) {
-        PaperFolding(1,N,true);
+        PaperFolding(1, N, true);
     }
+
     //i:节点的层数,N:层数,down--true 凹,down--false 凸
     public static void PaperFolding(int i, int n, boolean down) {
-        if (i<n) return;
+        if (i < n) return;
         //左节点都为凹
-        PaperFolding(i+1,n,true);
-        System.out.println(down?"凹":"凸");
+        PaperFolding(i + 1, n, true);
+        System.out.println(down ? "凹" : "凸");
         //右节点都为凸
-        PaperFolding(i+1,n,false);
+        PaperFolding(i + 1, n, false);
     }
 }
 
