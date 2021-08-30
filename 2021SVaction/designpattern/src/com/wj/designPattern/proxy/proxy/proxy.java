@@ -1,8 +1,6 @@
 package com.wj.designPattern.proxy.proxy;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
+import java.lang.reflect.*;
 import java.util.Arrays;
 
 /*
@@ -67,7 +65,7 @@ class myHandler implements InvocationHandler {
 
 public class proxy {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         //通过Proxy类中的静态方法,创建代理对象,通过proxy.class字节码文件getClassLoader()获取加载类的类加载器
         /*
@@ -102,10 +100,13 @@ public class proxy {
         iCalc.div(1, 2);
         iCalc.mul(1, 2);
         iCalc.sub(1, 2);
+
+
     }
 }
 /*
     解决了每个方法都要独立设置日志内容,现在只需要改一个地方即可(类似于拦截器,每个方法都会经过拦截器)
     缺点:
     写起来麻烦!,那就把这个代码封装起来,对用户更友好
+
  */
