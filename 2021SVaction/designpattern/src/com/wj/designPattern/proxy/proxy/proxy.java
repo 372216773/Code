@@ -76,7 +76,7 @@ public class proxy {
         ClassLoader classLoader = proxy.class.getClassLoader();
         /*
         第二个参数:字节码数组
-        确定类加载器要加载哪个类的字节码,这个字节码是运行时动态生成的字节码,是根据目标接口生成的,这是不需要源代码的,
+        确定类加载器要加载哪个类的字节码,这个字节码是运行时动态生成的字节码,是根据目标接口生成的,没有源代码的,
         字节码的内容就是实现了目标接口的字节码
          */
         Class[] interfaces = {ICalc.class};

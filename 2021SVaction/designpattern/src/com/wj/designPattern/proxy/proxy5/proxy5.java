@@ -84,7 +84,6 @@ class MyProxy {
 
     //封装:对外隐藏复杂的实现,暴露出简单的使用方法
     //静态:就不用再创建这个对象
-    //
     public static Object getProxy(Object target, Interceptor interceptor) {
         //获得类加载器
         ClassLoader classLoader = target.getClass().getClassLoader();
