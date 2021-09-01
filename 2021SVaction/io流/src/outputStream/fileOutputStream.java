@@ -25,7 +25,7 @@ public class fileOutputStream {
             //3.写入一个字符串的指定区域,[0,3)
             fileOutputStream.write(str.getBytes(),0,3);
 
-            //2.new FileOutputStream(filepath),会在原有内容基础上追加内容
+            //2.new FileOutputStream(filepath,true),会在原有内容基础上追加内容
             fileOutputStream1 = new FileOutputStream(filepath,true);
             fileOutputStream1.write('f');
         } catch (IOException e) {

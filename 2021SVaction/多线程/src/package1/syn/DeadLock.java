@@ -1,4 +1,4 @@
-package syn;
+package package1.syn;
 
 //模拟线程的死锁现象
 public class DeadLock {

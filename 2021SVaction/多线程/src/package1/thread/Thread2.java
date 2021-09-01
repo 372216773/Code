@@ -1,10 +1,10 @@
-package thread;
+package package1.thread;
 /*
 implements Runnable
 
         Dog dog = new Dog();
-        Thread thread = new Thread(dog);
-        thread.start();
+        Thread package1.thread = new Thread(dog);
+        package1.thread.start();
 
  */
 public class Thread2 {

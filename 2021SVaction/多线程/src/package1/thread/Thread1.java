@@ -1,4 +1,4 @@
-package thread;
+package package1.thread;
 /*
 extends Thread
 

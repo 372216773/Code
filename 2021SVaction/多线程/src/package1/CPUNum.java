@@ -1,3 +1,5 @@
+package package1;
+
 public class CPUNum {
     public static void main(String[] args) {
         Runtime runtime = Runtime.getRuntime();

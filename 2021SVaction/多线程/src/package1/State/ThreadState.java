@@ -1,4 +1,4 @@
-package State;
+package package1.State;
 
 public class ThreadState {
 

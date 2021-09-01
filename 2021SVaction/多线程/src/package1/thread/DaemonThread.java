@@ -1,4 +1,4 @@
-package thread;
+package package1.thread;
 //守护线程setDaemon
 public class DaemonThread {
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package syn;
+package package1.syn;
 
 /*
 使用线程售票
@@ -14,10 +14,10 @@ public class SellTicket {
         sellTicket3.start();*/
         //2.采用implements Runnable
         /*SellTicket2 sellTicket2 = new SellTicket2();
-        Thread thread = new Thread(sellTicket2);
+        Thread package1.thread = new Thread(sellTicket2);
         Thread thread1 = new Thread(sellTicket2);
         Thread thread2 = new Thread(sellTicket2);
-        thread.start();
+        package1.thread.start();
         thread1.start();
         thread2.start();*/
         //都会出现超卖现象
@@ -61,7 +61,7 @@ class SellTicket2 implements Runnable {
 
     /*
      public synchronized void sell(){}就是一个同步方法,锁在对象上
-     public synchronized static void method () {}
+     public synchronized static void package1.method () {}
      在非静态方法中
      synchronized (this) {}/synchronized (Object) {}在代码块上加锁,锁是加在对象上,这个对象可以是this,也可以是其他对象,但必须要保证一点,就是这多个线程操作的是同一个对象
      在静态方法中

@@ -1,4 +1,4 @@
-package exit;
+package package1.exit;
 
 public class ThreadExit {
     public static void main(String[] args) throws InterruptedException {

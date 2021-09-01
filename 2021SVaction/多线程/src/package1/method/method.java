@@ -1,4 +1,4 @@
-package method;
+package package1.method;
 /*
 interrupt
  */

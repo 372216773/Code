@@ -140,7 +140,7 @@ public class GoodsController extends HttpServlet {
                 //文件的表单条目
                 //fileItem.getName();//上传上来的文件名
                 String fileName = UUID.randomUUID().toString().replaceAll("-", "") + "_" + fileItem.getName();
-                String realPath = this.getServletContext().getRealPath("/upload");
+                String realPath = getServletContext().getRealPath("/upload");
                 File realPathFile = new File(realPath);
                 if (!realPathFile.exists()) {
                     realPathFile.mkdirs();

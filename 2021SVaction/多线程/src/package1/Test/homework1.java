@@ -1,6 +1,5 @@
-package Test;
+package package1.Test;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class homework1 {

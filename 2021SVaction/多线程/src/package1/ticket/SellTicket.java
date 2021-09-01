@@ -1,4 +1,4 @@
-package ticket;
+package package1.ticket;
 
 /*
 使用线程售票
