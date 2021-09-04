@@ -30,5 +30,7 @@ public class Main {
         BTNode root1 = BinaryTree.createBinaryTree(string);
         binaryTree.preOrderTraversal(root1);
 
+
+
     }
 }

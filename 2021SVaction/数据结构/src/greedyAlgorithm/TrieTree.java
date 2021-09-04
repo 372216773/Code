@@ -1,4 +1,8 @@
-public class Code_TrieTree {
+package greedyAlgorithm;
+/*
+前缀树
+ */
+public class TrieTree {
     public static class TrieNode {
         //被通过()了多少次
         public int pass;

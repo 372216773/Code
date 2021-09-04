@@ -3,7 +3,7 @@ package OJ.stack;
 import java.util.Deque;
 import java.util.LinkedList;
 
-//设计最小栈(支持push,pop,top操作,并能在常数时间内(时间复杂度O(1),即不能遍历)检索到最小元素的站)
+//设计最小栈(支持push,pop,top操作,并能在常数时间内(时间复杂度O(1),即不能遍历)检索到最小元素的栈)
 /*
 push(x)-->将元素x推入栈中
 pop()-->删除栈顶的元素

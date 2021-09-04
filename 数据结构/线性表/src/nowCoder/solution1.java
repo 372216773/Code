@@ -12,17 +12,13 @@ import java.util.Scanner;
 输出一个整数，为字符串s中字串“CHN”的数量。
 示例1
 输入
-复制
 CCHNCHN
 输出
-复制
 7
 示例2
 输入
-复制
 CCHNCHNCHNCHN
 输出
-复制
 30
  */
 public class solution1 {public static void main(String[] args) {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--parent-->
+    <parent>
+        <artifactId>mavenTest</artifactId>
+        <groupId>com.wj</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>childMaven</artifactId>
+
+    <dependencies>
+        <!--引入childMaven2子项目
+        依赖具有传递性-->
+        <dependency>
+            <groupId>com.wj</groupId>
+            <artifactId>childMaven2</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--继承下来,但是排除依赖,不需要version-->
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-dbutils</groupId>
+                    <artifactId>commons-dbutils</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--自己引入的依赖的版本可能和引入项目的依赖的版本冲突-->
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.6</version>
+        </dependency>
+    </dependencies>
+</project>
