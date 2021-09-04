@@ -1,4 +1,4 @@
-package greedyAlgorithm;
+package greedy;
 /*
 前缀树
  */

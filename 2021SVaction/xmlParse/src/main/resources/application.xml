@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--需要管理的Bean,不解析,就只是普通的xml文件-->
+<beans>
+    <!--不起名字,默认是简单类名小写-->
+    <bean name="memberController" class="com.wj.goods.controller.MemberController">
+        <properties>
+            <!--属性名: name=memberService;属性值: (对象类型的)bean=memberService-->
+            <property name="memberService" bean="memberService"/>
+            <!--属性名: name=vipNumber;属性值: value=20-->
+            <property name="vipNumber" value="20"/>
+        </properties>
+    </bean>
+    <bean name="goodsController" class="com.wj.goods.controller.GoodsController">
+        <properties>
+            <property name="goodsService" bean="goodsService"/>
+        </properties>
+    </bean>
+
+    <bean name="goodsService" class="com.wj.goods.service.GoodsService">
+        <properties>
+            <property name="goodsDao" bean="goodsDao"/>
+            <property name="memberDao" bean="memberDao"/>
+        </properties>
+    </bean>
+    <bean name="memberService" class="com.wj.goods.service.MemberService"/>
+
+    <bean name="goodsDao" class="com.wj.goods.dao.GoodsDao"/>
+    <bean name="memberDao" class="com.wj.goods.dao.MemberDao"/>
+</beans>

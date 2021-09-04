@@ -1,4 +1,4 @@
-package greedyAlgorithm;
+package greedy;
 
 import java.util.Scanner;
 //字符串中出现次数最多的单词和出现次数
