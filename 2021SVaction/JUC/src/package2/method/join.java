@@ -22,11 +22,11 @@ public class join {
                 e.printStackTrace();
             }
             System.out.println("结束");
-            res=10;
-        },"thread1");
+            res = 10;
+        }, "thread1");
         thread.start();
         Thread.sleep(1001);
-        System.out.println("结果为:    "+res);
+        System.out.println("结果为:    " + res);
         System.out.println("结束");
     }
 }
