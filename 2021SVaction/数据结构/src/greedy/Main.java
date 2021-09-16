@@ -1,25 +1,26 @@
 package greedy;
 
 import java.util.Scanner;
+
 //字符串中出现次数最多的单词和出现次数
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String article = scanner.next();
-        String string = article.replaceAll(",", " ").replaceAll("\\.", " ").replaceAll("!"," ");
+        String string = article.replaceAll(",", " ").replaceAll("\\.", " ").replaceAll("!", " ");
         String[] words = string.split(" ");
         TreNode node = new TreNode();
         TotalNum totalNum = new TotalNum();
         for (String word : words) {
-            insert(node,word, totalNum);
+            insert(node, word, totalNum);
         }
         System.out.println(totalNum);
     }
 
-    public static void insert(TreNode node, String word,TotalNum totalNum) {
-        if (word==null) return ;
+    public static void insert(TreNode node, String word, TotalNum totalNum) {
+        if (word == null) return;
         char[] chars = word.toCharArray();
-        node.past=1;
+        node.past = 1;
 
         int index = 0;
         for (char aChar : chars) {
@@ -32,13 +33,13 @@ public class Main {
             node.past++;
         }
         node.end++;
-        totalNum.method(node.end,word);
+        totalNum.method(node.end, word);
     }
 
 
 }
 
-class TreNode{
+class TreNode {
     public int past;
     public int end;
     public TreNode[] nexts;
@@ -55,7 +56,7 @@ class TotalNum {
     String word;
 
     public void method(int num, String word) {
-        if (num>max) {
+        if (num > max) {
             this.max = num;
             this.word = word;
         }

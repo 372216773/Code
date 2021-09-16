@@ -1,4 +1,4 @@
-package HashAndTree;
+package hash;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class HashAndTree {
+public class hashTest {
 
     public static class Node {
         public int value;

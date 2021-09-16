@@ -3,7 +3,7 @@ package Graph;
 import java.util.HashSet;
 import java.util.Stack;
 
-//深度优先遍历
+//深度优先遍历/广度优先遍历
 public class DFS {
 
     public static void dfs(Node node) {
