@@ -1,6 +1,6 @@
-package package2.synchronize;
+package package2.method;
 
-public class TestWaitAndSleep {
+public class waitAndSleep {
     static final Object lock = new Object();
 
     public static void main(String[] args) throws InterruptedException {

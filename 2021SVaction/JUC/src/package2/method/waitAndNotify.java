@@ -1,6 +1,6 @@
-package package2.synchronize;
+package package2.method;
 
-public class TestWaitAndNotify {
+public class waitAndNotify {
     static final Object lock = new Object();
     public static void main(String[] args) throws InterruptedException {
         new Thread(()->{
@@ -41,12 +41,12 @@ public class TestWaitAndNotify {
 
         Thread.sleep(1000);
         synchronized (lock) {
-            System.out.println(Thread.currentThread().getName()+"拿到锁,来随机唤醒Waiting中的线程");
+            System.out.println(Thread.currentThread().getName()+"拿到锁,调用notify来随机唤醒Waiting中的线程");
             //随即唤醒一个在Monitor对象中Waiting中的线程
-            lock.notify();
-            // JVM有很多实现, 比较流行的就是hotspot!
+            //lock.notify();
+            // JVM有很多实现, 比较流行的就是hotspot
             //唤醒所有在Monitor对象中Waiting中的对象
-            //lock.notifyAll();
+            lock.notifyAll();
             System.out.println("不会立即释放锁,而是将同步代码块执行完,才真正的释放锁");
         }
 
