@@ -1,6 +1,6 @@
 package package2.pattern;
 /*
-保护性暂停,即Guarded Suspension,用在一个线程等待另一个线程的执行结果
+保护性暂停,即Guarded Suspension,用在一个线程等待另一个线程的执行结果,一对一
  */
 public class GuardedSuspension {
     static final GuardedObject guardedObject = new GuardedObject();
