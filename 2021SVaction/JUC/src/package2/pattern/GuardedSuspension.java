@@ -2,7 +2,7 @@ package package2.pattern;
 /*
 保护性暂停,即Guarded Suspension,用在一个线程等待另一个线程的执行结果
  */
-public class Test1 {
+public class GuardedSuspension {
     static final GuardedObject guardedObject = new GuardedObject();
     public static void main(String[] args) {
         new Thread(()->{

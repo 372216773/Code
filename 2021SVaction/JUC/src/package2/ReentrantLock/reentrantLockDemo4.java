@@ -21,10 +21,10 @@ public class reentrantLockDemo4 {
         //会释放锁,进入condition1的conditionObject 中进入等待
         condition1.await();
 
-        //叫醒某个线程
+        //唤醒某个线程
         condition1.signal();
 
-        //叫醒所有线程
+        //唤醒所有线程
         condition1.signalAll();
     }
 }
