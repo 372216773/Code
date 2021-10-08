@@ -7,8 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Traversal traversal = new Traversal();
-        TreeNode tree = traversal.createTree();
-        Traversal.posOrderUnRecur(tree);
-
+        TreeNode tree = traversal.createTree1();
+        //Traversal.preOrderUnRecur(tree);
     }
 }

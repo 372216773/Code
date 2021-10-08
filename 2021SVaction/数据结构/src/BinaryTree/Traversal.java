@@ -42,14 +42,19 @@ public class Traversal {
         return A;
     }
 
-    public static TreeNode createTree1() {
-
-        TreeNode A = new TreeNode(2);
-        TreeNode B = new TreeNode(1);
+    //[1,null,2,null,3,null,4,null,5]
+    public TreeNode createTree1() {
+        TreeNode A = new TreeNode(1);
+        TreeNode B = new TreeNode(2);
         TreeNode C = new TreeNode(3);
+        TreeNode D = new TreeNode(4);
+        TreeNode E = new TreeNode(5);
 
-        A.left = B;
-        A.right = C;
+        A.right = B;
+        B.right = C;
+        C.right = D;
+        D.right = E;
+
         return A;
     }
 
