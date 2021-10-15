@@ -1,5 +1,6 @@
 package package2.ThreadPool.ThreadPool;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -40,11 +41,14 @@ public class TestShutDown {
             System.out.println("task 4 finish...");
             return 4;
         });*/
-        //不会阻塞调用线程的执行
-        //System.out.println("other......");
+        /*不会阻塞调用线程的执行
+        System.out.println("other......");
+         */
+        /*
         pool.awaitTermination(3, TimeUnit.SECONDS);
         System.out.println("other......");
-/*        List<Runnable> runnables = pool.shutdownNow();
-        System.out.println("other...." + runnables);*/
+        */
+        List<Runnable> runnables = pool.shutdownNow();
+        System.out.println("other...." + runnables);
     }
 }
