@@ -6,45 +6,7 @@ import java.util.concurrent.*;
 
 public class TestTimer {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        /*ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
-        pool.schedule(() -> {
-            try {
-                log.debug("task1");
-                int i = 1 / 0;
-            } catch (Exception e) {
-                log.error("error:", e);
-            }
-        }, 1, TimeUnit.SECONDS);*/
-
-        /*ExecutorService pool = Executors.newFixedThreadPool(1);
-        pool.submit(() -> {
-            try {
-                System.out.println("task1");
-                int i = 1 / 0;
-            } catch (Exception e) {
-                System.out.println("error:" + e);
-            }
-        });*/
-        method4();
-    }
-
-    private static void method3() {
-        ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
-        System.out.println("start...");
-        pool.scheduleAtFixedRate(() -> {
-            System.out.println("running...");
-        }, 1, 1, TimeUnit.SECONDS);
-    }
-
-    private static void method2(ScheduledExecutorService pool) {
-        pool.schedule(() -> {
-            System.out.println("task1");
-            int i = 1 / 0;
-        }, 1, TimeUnit.SECONDS);
-
-        pool.schedule(() -> {
-            System.out.println("task2");
-        }, 1, TimeUnit.SECONDS);
+        method1();
     }
 
     //timer延迟
@@ -74,7 +36,7 @@ public class TestTimer {
     }
 
     //timer错误
-    private static void method4() {
+    private static void method2() {
         Timer timer = new Timer();
         TimerTask task1 = new TimerTask() {
             @Override
