@@ -2,75 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d97e59b0-5514-402e-8502-bc50d905d9a1" name="Default Changelist" comment="javase复习">
-      <change afterPath="$PROJECT_DIR$/.idea/2021SVaction.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July17/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July19/July19.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July20/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July20/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July20/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July20/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July20/July20.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July21/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July21/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July21/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July21/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July21/July21.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hsp/out/production/project/Demo/maze.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/spring_AOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_AOP/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/springboot2.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot2.0/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../数据结构/线性表/src/nowCoder/solution1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2021SVaction.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/July19/src/InsertSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/July19/src/InsertSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Demo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-baseJdkToAOP/src/main/java/com/wj/spring/service/UserServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mybatis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_AOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_AOP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/conf/JdbcConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/java/com/wj/springboot/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/conf/JdbcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/target/classes/com/wj/springboot/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springmvc/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/META-INF/线性表.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/out/production/线性表/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构/线性表/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodsShow/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodsShow/.idea/artifacts/GoodsShow_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodsShow/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodsShow/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodsShow/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/web/WEB-INF/lib/fastjson-1.1.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/web/WEB-INF/lib/jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp/web/WEB-INF/lib/standard.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework/homework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/childMaven/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/childMaven2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/dependency-reduced-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenTest/mavenTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据结构/src/greedyAlgorithm/BestArrange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据结构/src/greedyAlgorithm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/July21/src/Tree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/July21/src/Tree/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpattern/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据结构/src/Code_TrieTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/数据结构/src/greedyAlgorithm/TrieTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Goods/Goods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Goods/Goods.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +101,7 @@
       <workItem from="1626739224228" duration="514000" />
       <workItem from="1626834876006" duration="210000" />
       <workItem from="1626835317299" duration="191000" />
+      <workItem from="1630638019931" duration="138000" />
     </task>
     <task id="LOCAL-00001" summary="javase复习">
       <created>1626481312410</created>

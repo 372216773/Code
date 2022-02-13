@@ -25,7 +25,6 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/login")
-    @ResponseBody
     /*通过get,set方法注入的,没有使用反射,不能访问私有属性*/
     public void login(@RequestBody User user) {
         System.out.println(user);
